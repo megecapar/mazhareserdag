@@ -7,53 +7,54 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <style>
-.blog-layout{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start}
+.blog-layout{display:grid;grid-template-columns:1fr 290px;gap:48px;align-items:start}
 .blog-grid-full{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .blog-card{border:1px solid var(--gray-100);border-radius:var(--radius);overflow:hidden;transition:box-shadow var(--transition),transform var(--transition)}
 .blog-card:hover{box-shadow:var(--shadow-md);transform:translateY(-4px)}
 .blog-img{height:200px;background:linear-gradient(135deg,var(--blue-pale),rgba(30,77,183,.12));display:flex;align-items:center;justify-content:center;font-size:3rem;color:var(--blue-mid);opacity:.5}
-.blog-body{padding:26px}
+.blog-body{padding:24px}
 .blog-cat{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue-mid);margin-bottom:10px}
 .blog-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--gray-900);line-height:1.35;margin-bottom:10px}
 .blog-excerpt{font-size:.86rem;color:var(--gray-500);line-height:1.65}
-.blog-meta{display:flex;align-items:center;gap:14px;margin-top:18px;padding-top:14px;border-top:1px solid var(--gray-100);font-size:.76rem;color:var(--gray-500)}
-.blog-card .read-more{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:.8rem;font-weight:600;color:var(--blue-mid);transition:gap var(--transition)}
-.blog-card .read-more:hover{gap:10px}
-
-/* sidebar */
-.sidebar-widget{background:var(--gray-50);border:1px solid var(--gray-100);border-radius:var(--radius);padding:24px;margin-bottom:24px}
+.blog-meta{display:flex;align-items:center;gap:14px;margin-top:16px;padding-top:14px;border-top:1px solid var(--gray-100);font-size:.76rem;color:var(--gray-500)}
+.read-more{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:.8rem;font-weight:600;color:var(--blue-mid);transition:gap var(--transition)}
+.read-more:hover{gap:10px}
+.sidebar-widget{background:var(--gray-50);border:1px solid var(--gray-100);border-radius:var(--radius);padding:24px;margin-bottom:20px}
 .sidebar-widget h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--gray-900);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--gray-200)}
-.cat-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.cat-list{list-style:none;display:flex;flex-direction:column;gap:6px}
 .cat-list li a{display:flex;align-items:center;justify-content:space-between;font-size:.88rem;color:var(--gray-700);padding:8px 12px;border-radius:6px;transition:all var(--transition)}
 .cat-list li a:hover{background:var(--blue-pale);color:var(--blue-mid)}
-.cat-list li a span{font-size:.75rem;background:var(--blue-mid);color:#fff;padding:2px 8px;border-radius:20px}
-.recent-post{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--gray-100)}
+.cat-list li a span{font-size:.74rem;background:var(--blue-mid);color:#fff;padding:2px 8px;border-radius:20px}
+.recent-post{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--gray-100)}
 .recent-post:last-child{border-bottom:none}
-.recent-post-img{width:54px;height:54px;border-radius:8px;background:linear-gradient(135deg,var(--blue-pale),rgba(30,77,183,.12));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;color:var(--blue-mid);opacity:.6}
-.recent-post-title{font-size:.84rem;font-weight:600;color:var(--gray-900);line-height:1.35;margin-bottom:4px}
-.recent-post-date{font-size:.74rem;color:var(--gray-500)}
-
+.recent-post-img{width:52px;height:52px;border-radius:8px;background:linear-gradient(135deg,var(--blue-pale),rgba(30,77,183,.12));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.2rem;color:var(--blue-mid);opacity:.6}
+.recent-post-title{font-size:.84rem;font-weight:600;color:var(--gray-900);line-height:1.35;margin-bottom:3px}
+.recent-post-date{font-size:.73rem;color:var(--gray-500)}
 @media(max-width:1024px){.blog-layout{grid-template-columns:1fr}}
-@media(max-width:768px){.blog-grid-full{grid-template-columns:1fr}}
+@media(max-width:640px){.blog-grid-full{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="topbar"><div class="topbar-inner"><div class="topbar-left"><a href="tel:+90" class="topbar-item"><i class="fas fa-phone"></i> +90 (5xx) xxx xx xx</a><a href="mailto:info@mazharesserdag.com" class="topbar-item"><i class="fas fa-envelope"></i> info@mazharesserdag.com</a></div><div class="topbar-social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div></div></div>
-<nav class="navbar"><div class="nav-inner"><a href="index.html" class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg></div><div><div class="logo-text">Op.Dr. Mazhar Eserdağ</div><div class="logo-sub">Akupunktur · Hipnoz · Biorezonans</div></div></a><div class="nav-menu"><a href="index.html" class="nav-link">Ana Sayfa</a><a href="hakkimda.html" class="nav-link">Hakkımda</a><a href="tedaviler.html" class="nav-link">Tedaviler</a><a href="blog.html" class="nav-link active">Blog</a><a href="iletisim.html" class="nav-link">İletişim</a></div><a href="iletisim.html" class="nav-cta"><i class="fas fa-calendar-check"></i> Randevu Al</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div></nav>
-<div class="nav-overlay" id="navOverlay"></div>
-<div class="mobile-nav" id="mobileNav"><a href="index.html" class="nav-link">Ana Sayfa</a><a href="hakkimda.html" class="nav-link">Hakkımda</a><a href="tedaviler.html" class="nav-link">Tedaviler</a><a href="blog.html" class="nav-link">Blog</a><a href="iletisim.html" class="nav-link">İletişim</a><a href="iletisim.html" class="nav-cta"><i class="fas fa-calendar-check"></i> Randevu Al</a></div>
 
-<div class="page-hero"><div class="page-hero-inner"><h1>Blog</h1><nav class="breadcrumb"><a href="index.html">Ana Sayfa</a><i class="fas fa-chevron-right"></i><span>Blog</span></nav></div></div>
+<div id="topbar-placeholder"></div>
+<div id="navbar-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Blog</h1>
+    <nav class="breadcrumb"><a href="index.html">Ana Sayfa</a><i class="fas fa-chevron-right"></i><span>Blog</span></nav>
+  </div>
+</div>
 
 <section class="section"><div class="container"><div class="blog-layout">
   <div>
     <div class="blog-grid-full">
-      <div class="blog-card fade-in d1"><div class="blog-img"><i class="fas fa-heartbeat"></i></div><div class="blog-body"><div class="blog-cat">Kalp Sağlığı</div><h3 class="blog-title">Akupunktur'un Kalp Sağlığına Etkileri</h3><p class="blog-excerpt">Akupunktur tedavisinin kardiyovasküler sistem üzerindeki olumlu etkileri ve klinik çalışmalardan elde edilen bulgular.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 15 Ocak 2025</span><span><i class="far fa-clock"></i> 5 dk</span></div><a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a></div></div>
-      <div class="blog-card fade-in d2"><div class="blog-img"><i class="fas fa-brain"></i></div><div class="blog-body"><div class="blog-cat">Stres &amp; Zihin</div><h3 class="blog-title">Hipnoz ile Stres Yönetimi</h3><p class="blog-excerpt">Hipnoterapi seanslarının stres ve kaygı üzerindeki etkileri; bilimsel temeller ve uygulama yöntemleri.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 8 Ocak 2025</span><span><i class="far fa-clock"></i> 7 dk</span></div><a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a></div></div>
-      <div class="blog-card fade-in d1"><div class="blog-img"><i class="fas fa-wave-square"></i></div><div class="blog-body"><div class="blog-cat">Biorezonans</div><h3 class="blog-title">Biorezonans Nedir, Ne İşe Yarar?</h3><p class="blog-excerpt">Biorezonans terapisinin çalışma prensipleri, uygulama alanları ve sağlık üzerindeki potansiyel yararları.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 2 Ocak 2025</span><span><i class="far fa-clock"></i> 6 dk</span></div><a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a></div></div>
-      <div class="blog-card fade-in d2"><div class="blog-img"><i class="fas fa-spa"></i></div><div class="blog-body"><div class="blog-cat">Akupunktur</div><h3 class="blog-title">Akupunktur Seansından Ne Beklenir?</h3><p class="blog-excerpt">İlk akupunktur seansınıza gitmeden önce bilmeniz gerekenler ve seans sürecinin ayrıntılı anlatımı.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 20 Aralık 2024</span><span><i class="far fa-clock"></i> 4 dk</span></div><a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a></div></div>
-      <div class="blog-card fade-in d1"><div class="blog-img"><i class="fas fa-heartbeat"></i></div><div class="blog-body"><div class="blog-cat">Kalp Sağlığı</div><h3 class="blog-title">Kalp Hastalıklarından Korunma Yolları</h3><p class="blog-excerpt">Kardiyovasküler hastalıkları önlemenin en etkili yolları ve günlük yaşamda uygulayabileceğiniz değişiklikler.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 10 Aralık 2024</span><span><i class="far fa-clock"></i> 8 dk</span></div><a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a></div></div>
-      <div class="blog-card fade-in d2"><div class="blog-img"><i class="fas fa-balance-scale"></i></div><div class="blog-body"><div class="blog-cat">Bütüncül Tıp</div><h3 class="blog-title">Bütüncül Tıp Nedir?</h3><p class="blog-excerpt">Bütüncül tıp anlayışının temelleri, geleneksel tıptan farkları ve hastaların bu yaklaşımdan nasıl yararlandığı.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 1 Aralık 2024</span><span><i class="far fa-clock"></i> 5 dk</span></div><a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="blog-card fade-in d1"><div class="blog-img"><i class="fas fa-heartbeat"></i></div><div class="blog-body"><div class="blog-cat">Kalp Sağlığı</div><h3 class="blog-title">Akupunktur'un Kalp Sağlığına Etkileri</h3><p class="blog-excerpt">Akupunktur tedavisinin kardiyovasküler sistem üzerindeki olumlu etkileri ve klinik bulgular.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 15 Ocak 2025</span><span><i class="far fa-clock"></i> 5 dk</span></div><a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="blog-card fade-in d2"><div class="blog-img"><i class="fas fa-brain"></i></div><div class="blog-body"><div class="blog-cat">Stres &amp; Zihin</div><h3 class="blog-title">Hipnoz ile Stres Yönetimi</h3><p class="blog-excerpt">Hipnoterapi seanslarının stres ve kaygı üzerindeki etkileri; bilimsel temeller.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 8 Ocak 2025</span><span><i class="far fa-clock"></i> 7 dk</span></div><a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="blog-card fade-in d1"><div class="blog-img"><i class="fas fa-wave-square"></i></div><div class="blog-body"><div class="blog-cat">Biorezonans</div><h3 class="blog-title">Biorezonans Nedir, Ne İşe Yarar?</h3><p class="blog-excerpt">Biorezonans terapisinin çalışma prensipleri ve sağlık üzerindeki potansiyel yararları.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 2 Ocak 2025</span><span><i class="far fa-clock"></i> 6 dk</span></div><a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="blog-card fade-in d2"><div class="blog-img"><i class="fas fa-spa"></i></div><div class="blog-body"><div class="blog-cat">Akupunktur</div><h3 class="blog-title">Akupunktur Seansından Ne Beklenir?</h3><p class="blog-excerpt">İlk akupunktur seansınıza gitmeden önce bilmeniz gerekenler.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 20 Aralık 2024</span><span><i class="far fa-clock"></i> 4 dk</span></div><a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="blog-card fade-in d1"><div class="blog-img"><i class="fas fa-heartbeat"></i></div><div class="blog-body"><div class="blog-cat">Kalp Sağlığı</div><h3 class="blog-title">Kalp Hastalıklarından Korunma</h3><p class="blog-excerpt">Kardiyovasküler hastalıkları önlemenin en etkili yolları.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 10 Aralık 2024</span><span><i class="far fa-clock"></i> 8 dk</span></div><a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="blog-card fade-in d2"><div class="blog-img"><i class="fas fa-balance-scale"></i></div><div class="blog-body"><div class="blog-cat">Bütüncül Tıp</div><h3 class="blog-title">Bütüncül Tıp Nedir?</h3><p class="blog-excerpt">Bütüncül tıp anlayışının temelleri ve geleneksel tıptan farkları.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 1 Aralık 2024</span><span><i class="far fa-clock"></i> 5 dk</span></div><a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a></div></div>
     </div>
   </div>
   <div>
@@ -76,14 +77,13 @@
     </div>
     <div class="sidebar-widget fade-in d4">
       <h4>Randevu Al</h4>
-      <p style="font-size:.87rem;color:var(--gray-500);margin-bottom:16px;line-height:1.6">Sağlığınız için doğru adımı atın. Hemen randevu alın.</p>
+      <p style="font-size:.87rem;color:var(--gray-500);margin-bottom:16px;line-height:1.6">Sağlığınız için doğru adımı atın.</p>
       <a href="iletisim.html" class="btn btn-blue" style="width:100%;justify-content:center"><i class="fas fa-calendar-check"></i> Randevu Al</a>
     </div>
   </div>
 </div></div></section>
 
-<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div><div class="footer-logo-text">Op.Dr. Mazhar Eserdağ</div><div class="footer-logo-sub">Akupunktur · Hipnoz · Biorezonans</div><p class="footer-about">Kalp ve Damar Cerrahisi uzmanı olarak bütüncül tıp yaklaşımıyla hizmet veriyorum.</p></div><div><div class="footer-h">Sayfalar</div><ul class="footer-links"><li><a href="index.html">Ana Sayfa</a></li><li><a href="hakkimda.html">Hakkımda</a></li><li><a href="tedaviler.html">Tedaviler</a></li><li><a href="blog.html">Blog</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div><div><div class="footer-h">Tedaviler</div><ul class="footer-links"><li><a href="tedaviler.html">Kalp &amp; Damar</a></li><li><a href="tedaviler.html">Akupunktur</a></li><li><a href="tedaviler.html">Hipnoz</a></li><li><a href="tedaviler.html">Biorezonans</a></li></ul></div><div><div class="footer-h">İletişim</div><ul class="footer-links"><li><a href="#">İstanbul, Türkiye</a></li><li><a href="tel:+90">+90 (5xx) xxx xx xx</a></li><li><a href="mailto:info@mazharesserdag.com">info@mazharesserdag.com</a></li></ul><div class="social-links" style="margin-top:18px"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a><a href="#" class="social-link"><i class="fab fa-youtube"></i></a></div></div></div><div class="footer-bottom"><span>© 2025 Op.Dr. Mazhar Eserdağ. Tüm hakları saklıdır.</span><span>Tasarım ile ❤️ yapıldı</span></div></div></footer>
-<button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
-<a href="https://wa.me/90" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<div id="footer-placeholder"></div>
 <script src="main.js"></script>
-</body></html>
+</body>
+</html>

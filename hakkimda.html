@@ -8,130 +8,112 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <style>
-/* ── ABOUT PAGE SPECIFIC ── */
-.about-layout{display:grid;grid-template-columns:420px 1fr;gap:64px;align-items:start}
+.about-layout{display:grid;grid-template-columns:380px 1fr;gap:64px;align-items:start}
 .about-sidebar{position:sticky;top:calc(var(--nav-h) + 24px)}
-.doctor-photo{border-radius:var(--radius);overflow:hidden;background:linear-gradient(145deg,#c8dff5,#e8f2fb);height:500px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;position:relative}
+.doctor-photo{border-radius:var(--radius);overflow:hidden;background:linear-gradient(145deg,#c8dff5,#e8f2fb);height:460px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.doctor-photo img{width:100%;height:100%;object-fit:cover}
 .doctor-photo-placeholder{text-align:center;color:var(--blue-mid)}
 .doctor-photo-placeholder i{font-size:6rem;opacity:.35}
 .doctor-photo-placeholder p{font-size:.9rem;opacity:.5;margin-top:12px}
-.photo-caption{text-align:center;margin-bottom:28px}
+.photo-caption{text-align:center;margin-bottom:24px}
 .photo-caption h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--gray-900)}
 .photo-caption p{font-size:.85rem;color:var(--gray-500);margin-top:4px}
-.sidebar-contact{background:var(--blue-pale);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:14px;margin-bottom:24px}
-.sidebar-contact-item{display:flex;align-items:center;gap:12px;font-size:.88rem;color:var(--gray-700)}
-.sidebar-contact-item i{width:32px;height:32px;border-radius:8px;background:var(--blue-mid);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0}
-.sidebar-social{display:flex;gap:10px}
+.sidebar-tags{display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+.sidebar-tag{display:flex;align-items:center;gap:12px;background:var(--blue-pale);border-radius:8px;padding:11px 15px;font-size:.87rem;color:var(--gray-700)}
+.sidebar-tag i{color:var(--blue-mid);width:16px;text-align:center;flex-shrink:0}
+.sidebar-social{display:flex;gap:10px;margin-top:4px}
 .sidebar-social a{flex:1;height:40px;border-radius:8px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;color:var(--gray-500);font-size:1rem;transition:all var(--transition)}
 .sidebar-social a:hover{background:var(--blue-mid);color:#fff}
 
-.about-content h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gray-900);margin:36px 0 14px;padding-top:36px;border-top:1px solid var(--gray-100)}
+/* İçerik */
+.about-content h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--gray-900);margin:44px 0 14px;padding-top:44px;border-top:1px solid var(--gray-100)}
 .about-content h2:first-child{margin-top:0;padding-top:0;border-top:none}
-.about-content p{font-size:.97rem;color:var(--gray-600,#475569);line-height:1.8;margin-bottom:16px}
-.about-content ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.about-content p{font-size:.97rem;color:#475569;line-height:1.85;margin-bottom:16px}
+.about-content ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
 .about-content ul li{display:flex;align-items:flex-start;gap:10px;font-size:.93rem;color:var(--gray-700);line-height:1.6}
 .about-content ul li::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:var(--blue-mid);margin-top:7px;flex-shrink:0}
 
-.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
-.cert-card{background:var(--gray-50);border:1px solid var(--gray-100);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:12px;transition:box-shadow var(--transition)}
+/* Sertifika kartları */
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.cert-card{background:var(--gray-50);border:1px solid var(--gray-100);border-radius:10px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:box-shadow var(--transition)}
 .cert-card:hover{box-shadow:var(--shadow-sm)}
-.cert-card i{color:var(--blue-mid);font-size:1.1rem;flex-shrink:0}
-.cert-card span{font-size:.84rem;color:var(--gray-700);line-height:1.4}
+.cert-card i{color:var(--blue-mid);font-size:1rem;flex-shrink:0;margin-top:2px}
+.cert-card span{font-size:.83rem;color:var(--gray-700);line-height:1.45}
 
-.timeline{position:relative;padding-left:28px;margin-top:8px}
+/* Zaman çizelgesi */
+.timeline{position:relative;padding-left:28px;margin-top:12px}
 .timeline::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:2px;background:var(--gray-200)}
-.timeline-item{position:relative;padding-bottom:28px}
-.timeline-item::before{content:'';position:absolute;left:-25px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--blue-mid);border:3px solid var(--white);box-shadow:0 0 0 2px var(--blue-mid)}
-.timeline-year{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-mid);margin-bottom:4px}
-.timeline-title{font-weight:600;color:var(--gray-900);font-size:.95rem;margin-bottom:4px}
+.timeline-item{position:relative;padding-bottom:26px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item::before{content:'';position:absolute;left:-25px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--blue-mid);border:3px solid #fff;box-shadow:0 0 0 2px var(--blue-mid)}
+.timeline-year{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-mid);margin-bottom:3px}
+.timeline-title{font-weight:600;color:var(--gray-900);font-size:.95rem;margin-bottom:3px}
 .timeline-desc{font-size:.85rem;color:var(--gray-500);line-height:1.6}
 
-@media(max-width:1024px){.about-layout{grid-template-columns:1fr;gap:40px}.about-sidebar{position:static}.doctor-photo{height:360px}.cert-grid{grid-template-columns:1fr}}
-@media(max-width:768px){.cert-grid{grid-template-columns:1fr}}
+/* Alıntı kutusu */
+.quote-box{margin-top:44px;padding:32px 36px;background:var(--blue-pale);border-radius:var(--radius);border-left:4px solid var(--blue-mid)}
+.quote-box p{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;color:var(--blue-dark);margin:0;line-height:1.65}
+.quote-box cite{display:block;margin-top:14px;font-size:.82rem;font-weight:600;color:var(--blue-mid);font-style:normal}
+
+/* Kişisel bilgi bandı */
+.personal-band{display:flex;gap:24px;flex-wrap:wrap;margin-top:12px}
+.personal-item{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--gray-600,#475569)}
+.personal-item i{color:var(--blue-mid);font-size:.85rem}
+
+@media(max-width:1024px){
+  .about-layout{grid-template-columns:1fr;gap:40px}
+  .about-sidebar{position:static}
+  .doctor-photo{height:320px}
+  .cert-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="topbar-left">
-      <a href="tel:+90" class="topbar-item"><i class="fas fa-phone"></i> +90 (5xx) xxx xx xx</a>
-      <a href="mailto:info@mazharesserdag.com" class="topbar-item"><i class="fas fa-envelope"></i> info@mazharesserdag.com</a>
-      <a href="https://maps.google.com/?q=38.435120,27.143602" target="_blank" class="topbar-item"><i class="fas fa-map-marker-alt"></i> Yol Tarifi Al</a>
-    </div>
-    <div class="topbar-social">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-    </div>
-  </div>
-</div>
+<div id="topbar-placeholder"></div>
+<div id="navbar-placeholder"></div>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg></div>
-      <div><div class="logo-text">Op.Dr. Mazhar Eserdağ</div><div class="logo-sub">Akupunktur · Hipnoz · Biorezonans</div></div>
-    </a>
-    <div class="nav-menu">
-      <a href="index.html" class="nav-link">Ana Sayfa</a>
-      <a href="hakkimda.html" class="nav-link active">Hakkımda</a>
-      <a href="tedaviler.html" class="nav-link">Tedaviler</a>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="iletisim.html" class="nav-link">İletişim</a>
-    </div>
-    <a href="iletisim.html" class="nav-cta"><i class="fas fa-calendar-check"></i> Randevu Al</a>
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-<div class="nav-overlay" id="navOverlay"></div>
-<div class="mobile-nav" id="mobileNav">
-  <a href="index.html" class="nav-link">Ana Sayfa</a>
-  <a href="hakkimda.html" class="nav-link">Hakkımda</a>
-  <a href="tedaviler.html" class="nav-link">Tedaviler</a>
-  <a href="blog.html" class="nav-link">Blog</a>
-  <a href="iletisim.html" class="nav-link">İletişim</a>
-  <a href="iletisim.html" class="nav-cta"><i class="fas fa-calendar-check"></i> Randevu Al</a>
-</div>
-
-<!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
-    <h1>Op.Dr. Mazhar Eserdağ Kimdir?</h1>
-    <nav class="breadcrumb"><a href="index.html">Ana Sayfa</a><i class="fas fa-chevron-right"></i><span>Hakkımda</span></nav>
+    <h1>Benim Hikayem</h1>
+    <nav class="breadcrumb">
+      <a href="index.html">Ana Sayfa</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Hakkımda</span>
+    </nav>
   </div>
 </div>
 
-<!-- CONTENT -->
 <section class="section">
   <div class="container">
     <div class="about-layout">
 
-      <!-- SIDEBAR -->
+      <!-- SOL KOLON: Fotoğraf + Bilgiler -->
       <div class="about-sidebar fade-in">
         <div class="doctor-photo">
-          <div class="doctor-photo-placeholder">
-            <i class="fas fa-user-md"></i>
-            <p>Fotoğraf eklenecek</p>
-          </div>
+          <img src="images/mazhar.jpeg" alt="Op.Dr. Mazhar Eserdağ"> 
+          
         </div>
         <div class="photo-caption">
           <h3>Op.Dr. Mazhar Eserdağ</h3>
           <p>Kalp ve Damar Cerrahisi Uzmanı</p>
         </div>
-        <div class="sidebar-contact">
-          <div class="sidebar-contact-item"><i class="fas fa-stethoscope"></i> Kalp &amp; Damar Cerrahisi</div>
-          <div class="sidebar-contact-item"><i class="fas fa-spa"></i> Akupunktur Uzmanı</div>
-          <div class="sidebar-contact-item"><i class="fas fa-brain"></i> Hipnoz Terapisti</div>
-          <div class="sidebar-contact-item"><i class="fas fa-wave-square"></i> Biorezonans Uzmanı</div>
-          <div class="sidebar-contact-item"><i class="fas fa-map-marker-alt"></i> Talatpaşa bulvarı No42/4 (Uyar apt kat:2 daire:4) Alsancak/İzmir</div>
+        <div class="sidebar-tags">
+          <div class="sidebar-tag"><i class="fas fa-stethoscope"></i> Kalp ve Damar Cerrahisi</div>
+          <div class="sidebar-tag"><i class="fas fa-spa"></i> Akupunktur Uzmanı</div>
+          <div class="sidebar-tag"><i class="fas fa-brain"></i> Hipnoz Terapisti</div>
+          <div class="sidebar-tag"><i class="fas fa-wave-square"></i> Biorezonans Uzmanı</div>
+          <div class="sidebar-tag"><i class="fas fa-heart"></i> Vajinismus Uzmanı</div>
+          <div class="sidebar-tag"><i class="fas fa-map-marker-alt"></i> İzmir Alsancak</div>
+          <div class="sidebar-tag"><i class="fas fa-language"></i> İngilizce</div>
         </div>
-        <a href="iletisim.html" class="btn btn-blue" style="width:100%;justify-content:center;margin-bottom:12px"><i class="fas fa-calendar-check"></i> Randevu Al</a>
-        <a href="tel:+90" class="btn btn-outline" style="width:100%;justify-content:center"><i class="fas fa-phone"></i> Hemen Ara</a>
-        <div class="sidebar-social" style="margin-top:16px">
+        <a href="iletisim.html" class="btn btn-blue" style="width:100%;justify-content:center;margin-bottom:10px">
+          <i class="fas fa-calendar-check"></i> Randevu Al
+        </a>
+        <a href="tel:+90" class="btn btn-outline" style="width:100%;justify-content:center">
+          <i class="fas fa-phone"></i> Hemen Ara
+        </a>
+        <div class="sidebar-social" style="margin-top:14px">
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -139,80 +121,99 @@
         </div>
       </div>
 
-      <!-- MAIN CONTENT -->
+      <!-- SAĞ KOLON: İçerik -->
       <div class="about-content fade-in d2">
-        <h2>Hakkımda</h2>
-        <p>Op.Dr. Mazhar Eserdağ, tıp eğitimini Türkiye'nin köklü eğitim kurumlarından birinde tamamlamıştır. Tıp fakültesinden mezun olduktan sonra mesleki yaşamına büyük bir özveriyle adım atan Dr. Eserdağ, insan sağlığına olan ilgisi ve hizmet anlayışıyla kısa sürede alanında kendini geliştirmiştir.</p>
-        <p>Uzmanlık eğitimi sürecinde temel klinik deneyimlerini edinen Dr. Eserdağ, Kalp ve Damar Cerrahisi alanında derinlemesine uzmanlaşmış; ardından bütüncül tıp anlayışını benimseyerek Akupunktur, Hipnoz Terapisi ve Biorezonans gibi tamamlayıcı tedavi yöntemlerini de pratiğine eklemiştir.</p>
-        <p>Modern tıp ile geleneksel iyileştirme yöntemlerini harmanlayan Dr. Eserdağ, hastalarına kapsamlı ve kişiselleştirilmiş tedavi yaklaşımı sunmaktadır. Her hastanın bireysel ihtiyaçlarını göz önünde bulundurarak hazırlanan tedavi planları, kalıcı ve bütüncül iyileşmeyi hedeflemektedir.</p>
 
+        <h2>Hakkımda</h2>
+        <p>1988 yılında Dokuz Eylül Üniversitesi Tıp Fakültesi'nden mezun olduktan sonra tıp mesleğine Muş ilinde Sağlık Ocağı Tabipliği ve İl Sağlık Müdür Yardımcılığı görevleriyle başladım. Ardından uzun yıllar Manisa Devlet Hastanesi'nde acil servis ve hemodiyaliz sorumlu hekimliği yaptım.</p>
+        <p>Uzmanlık eğitimimi 2004–2009 yılları arasında Celal Bayar Üniversitesi Tıp Fakültesi Kalp ve Damar Cerrahisi Anabilim Dalı'nda tamamladım. Uzmanlık sonrasında Eskişehir Yunus Emre Devlet Hastanesi, Bursa Yüksek İhtisas Hastanesi ve İzmir Tepecik Eğitim ve Araştırma Hastanesi'nde görev aldım.</p>
+        <p>2012 yılında Manisa Devlet Hastanesi'ne atandım ve aynı yıl hastane başhekimi olarak görevlendirildim. 2015'te Manisa Kamu Hastaneleri Birliği İdari Hizmetler Başkanlığı görevini üstlendim. 2016 yılında kamu görevinden ayrılarak <strong>İzmir Alsancak'taki özel muayenehanemde</strong> serbest hekimlik yapmaya başladım.</p>
+        <p>Özel ilgi alanım olan vajinismus ve cinsel işlev bozuklukları tedavisinde; modern tıbbi yaklaşımların yanı sıra hipnoz, akupunktur, biorezonans, kupa tedavisi ve tamamlayıcı tıp yöntemlerini bir arada kullanarak kişiye özel, bütüncül bir tedavi anlayışı sunuyorum. 2025 itibarıyla Bicom Optima Biorezonans teknolojisiyle sigara bırakma, alerji, kilo yönetimi, migren, stres-anksiyete ve sınav kaygısı gibi alanlarda da destekleyici uygulamalar gerçekleştirmekteyim.</p>
+        <p>Kalp ve damar sağlığının korunmasına yönelik olarak koroner arter hastalığı, hipertansiyon, Tip 2 diyabet ve metabolik sendrom gibi hastalıklardan korunma amacıyla bütüncül tıp yaklaşımı doğrultusunda biorezonans uygulamaları yapıyorum. Bunun yanı sıra fonksiyonel tıp ilkelerine dayalı kişiye özel beslenme modelleri geliştiriyor ve tıbbi danışmanlık hizmeti sunuyorum. Muayenehanemde kılcal varis tedavileri, köpük tedavisi, lazer ve skleroterapi gibi estetik-fonksiyonel uygulamalara da yer veriyorum.</p>
+
+        <div class="personal-band">
+          <div class="personal-item"><i class="fas fa-user"></i> Evli, 2 çocuk babası</div>
+          <div class="personal-item"><i class="fas fa-language"></i> İngilizce bilir</div>
+          <div class="personal-item"><i class="fas fa-map-marker-alt"></i> İzmir Alsancak</div>
+        </div>
+
+        <!-- MESLEKİ DENEYİM -->
         <h2>Mesleki Deneyim</h2>
         <div class="timeline">
           <div class="timeline-item">
-            <div class="timeline-year">2018 – Günümüz</div>
-            <div class="timeline-title">Özel Klinik – İstanbul</div>
-            <div class="timeline-desc">Bütüncül tıp, akupunktur, hipnoterapi ve biorezonans uygulamaları ile özel poliklinik hizmetleri.</div>
+            <div class="timeline-year">2016 – Günümüz</div>
+            <div class="timeline-title">Özel Muayenehane — İzmir Alsancak</div>
+            <div class="timeline-desc">Kalp ve damar cerrahisi, vajinismus, akupunktur, hipnoz, biorezonans ve tamamlayıcı tıp uygulamaları.</div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-year">2012 – 2018</div>
-            <div class="timeline-title">Kalp ve Damar Cerrahisi Kliniği</div>
-            <div class="timeline-desc">Kalp damar hastalıklarının cerrahi ve cerrahi dışı tedavisi, hasta takibi ve danışmanlık.</div>
+            <div class="timeline-year">2015</div>
+            <div class="timeline-title">Manisa Kamu Hastaneleri Birliği</div>
+            <div class="timeline-desc">İdari Hizmetler Başkanı olarak görev.</div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-year">2006 – 2012</div>
-            <div class="timeline-title">Uzmanlık Eğitimi</div>
-            <div class="timeline-desc">Kalp ve Damar Cerrahisi alanında uzmanlık eğitimi, klinik rotasyonlar ve araştırma çalışmaları.</div>
+            <div class="timeline-year">2012 – 2015</div>
+            <div class="timeline-title">Manisa Devlet Hastanesi</div>
+            <div class="timeline-desc">Kalp ve Damar Cerrahisi Uzmanı ve Hastane Başhekimi.</div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-year">2000 – 2006</div>
-            <div class="timeline-title">Tıp Fakültesi</div>
-            <div class="timeline-desc">Tıp eğitimi, mezuniyet ve ardından intörnlük programı tamamlama.</div>
+            <div class="timeline-year">2009 – 2012</div>
+            <div class="timeline-title">Eskişehir, Bursa, İzmir — Devlet Hastaneleri</div>
+            <div class="timeline-desc">Eskişehir Yunus Emre Devlet Hastanesi, Bursa Yüksek İhtisas Hastanesi, İzmir Tepecik Eğitim ve Araştırma Hastanesi'nde Kalp ve Damar Cerrahisi Uzmanı.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2004 – 2009</div>
+            <div class="timeline-title">Celal Bayar Üniversitesi Tıp Fakültesi</div>
+            <div class="timeline-desc">Kalp ve Damar Cerrahisi Anabilim Dalı'nda uzmanlık eğitimi.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1988 – 2004</div>
+            <div class="timeline-title">Muş &amp; Manisa — Çeşitli Görevler</div>
+            <div class="timeline-desc">Sağlık Ocağı Tabipliği, İl Sağlık Müdür Yardımcılığı; Manisa Devlet Hastanesi acil servis ve hemodiyaliz sorumlu hekimliği.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1988</div>
+            <div class="timeline-title">Dokuz Eylül Üniversitesi Tıp Fakültesi</div>
+            <div class="timeline-desc">Tıp Fakültesi mezuniyeti.</div>
           </div>
         </div>
 
-        <h2>Eğitim Sertifikaları ve Kongreler</h2>
+        <!-- SERTİFİKALAR -->
+        <h2>Eğitim, Sertifikalar ve Üyelikler</h2>
         <div class="cert-grid">
-          <div class="cert-card"><i class="fas fa-certificate"></i><span>Akupunktur Temel ve İleri Sertifikası</span></div>
-          <div class="cert-card"><i class="fas fa-certificate"></i><span>Hipnoz Terapisi Uygulayıcı Sertifikası</span></div>
-          <div class="cert-card"><i class="fas fa-certificate"></i><span>Biorezonans Terapi Sertifikası</span></div>
-          <div class="cert-card"><i class="fas fa-certificate"></i><span>Ulusal Kalp Damar Cerrahisi Kongresi</span></div>
-          <div class="cert-card"><i class="fas fa-certificate"></i><span>Bütüncül Tıp ve Tamamlayıcı Tedaviler Kursu</span></div>
-          <div class="cert-card"><i class="fas fa-certificate"></i><span>Stres Yönetimi ve Zihin-Beden Sertifikası</span></div>
+          <div class="cert-card"><i class="fas fa-certificate"></i><span>Hipnoz Eğitimi — SBÜ İstanbul Bağcılar E.A.H. (2018)</span></div>
+          <div class="cert-card"><i class="fas fa-certificate"></i><span>Akupunktur Eğitimi — SBÜ İstanbul Bağcılar E.A.H. (2017)</span></div>
+          <div class="cert-card"><i class="fas fa-certificate"></i><span>Kupa Uygulamaları Eğitimi — SBÜ İstanbul Bağcılar E.A.H. (2017)</span></div>
+          <div class="cert-card"><i class="fas fa-certificate"></i><span>Fellow Cinsel Terapist (FECSM) — Avrupa Seksoloji Federasyonu EFS (2016)</span></div>
+          <div class="cert-card"><i class="fas fa-certificate"></i><span>Aile Danışmanlığı Sertifikası — Gazikent Üniversitesi (2013)</span></div>
+          <div class="cert-card"><i class="fas fa-certificate"></i><span>Klinik ve Pratik Auriküloterapi — Nogier Türkiye (2019)</span></div>
+          <div class="cert-card"><i class="fas fa-certificate"></i><span>Hipnotik Yeniden İşleme Terapisi (HYT) Eğitimi (2019)</span></div>
+          <div class="cert-card"><i class="fas fa-certificate"></i><span>Estetik ve Kozmetik Uygulamaları — Medicana İzmir / Sağlık Bakanlığı (2025)</span></div>
         </div>
 
+        <!-- UZMANLIK ALANLARI -->
         <h2>Uzmanlık Alanları</h2>
         <ul>
-          <li>Kalp ve damar hastalıklarının tanı ve cerrahi tedavisi</li>
-          <li>Geleneksel Çin tıbbı yöntemleriyle akupunktur uygulamaları</li>
-          <li>Bilinçaltı çalışmaları kapsamında hipnoterapi seansları</li>
-          <li>Biorezonans ile detoks ve bağışıklık güçlendirme</li>
-          <li>Stres yönetimi ve zihin-beden uyum programları</li>
-          <li>Bütüncül sağlık danışmanlığı ve yaşam tarzı koçluğu</li>
+          <li>Vajinismus ve cinsel işlev bozuklukları tedavisi</li>
+          <li>Kalp ve damar hastalıkları, kılcal varis ve skleroterapi</li>
+          <li>Akupunktur ve Fransız Kulak Akupunkturu (Auriküloterapi)</li>
+          <li>Hipnoz ve Hipnotik Yeniden İşleme Terapisi (HYT)</li>
+          <li>Bicom Optima Biorezonans uygulamaları</li>
+          <li>Sigara bırakma, kilo yönetimi, stres ve anksiyete tedavisi</li>
+          <li>Fonksiyonel tıp ve kişiye özel beslenme danışmanlığı</li>
+          <li>Estetik ve kozmetik uygulamalar</li>
         </ul>
 
-        <div style="margin-top:40px;padding:32px;background:var(--blue-pale);border-radius:var(--radius);border-left:4px solid var(--blue-mid)">
-          <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--blue-dark);margin:0;line-height:1.6">"Sağlık sadece hastalığın yokluğu değil; bedenin, zihnin ve ruhun tam bir uyum ve denge içinde olması halidir."</p>
-          <p style="margin-top:12px;font-size:.82rem;font-weight:600;color:var(--blue-mid);margin-bottom:0">— Op.Dr. Mazhar Eserdağ</p>
+        <div class="quote-box">
+          <p>"Modern tıbbın imkânlarını geleneksel iyileştirme yöntemleriyle harmanlayarak her hastama bütüncül, kişiye özel bir tedavi yolculuğu sunmayı hedefliyorum."</p>
+          <cite>— Op.Dr. Mazhar Eserdağ</cite>
         </div>
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div><div class="footer-logo-text">Op.Dr. Mazhar Eserdağ</div><div class="footer-logo-sub">Akupunktur · Hipnoz · Biorezonans</div><p class="footer-about">Kalp ve Damar Cerrahisi uzmanı olarak bütüncül tıp yaklaşımıyla hizmet veriyorum.</p></div>
-      <div><div class="footer-h">Sayfalar</div><ul class="footer-links"><li><a href="index.html">Ana Sayfa</a></li><li><a href="hakkimda.html">Hakkımda</a></li><li><a href="tedaviler.html">Tedaviler</a></li><li><a href="blog.html">Blog</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
-      <div><div class="footer-h">Tedaviler</div><ul class="footer-links"><li><a href="tedaviler.html">Kalp &amp; Damar</a></li><li><a href="tedaviler.html">Akupunktur</a></li><li><a href="tedaviler.html">Hipnoz</a></li><li><a href="tedaviler.html">Biorezonans</a></li><li><a href="tedaviler.html">Stres Yönetimi</a></li></ul></div>
-      <div><div class="footer-h">İletişim</div><ul class="footer-links"><li><a href="#">İstanbul, Türkiye</a></li><li><a href="tel:+90">+90 (5xx) xxx xx xx</a></li><li><a href="mailto:info@mazharesserdag.com">info@mazharesserdag.com</a></li></ul><div class="social-links" style="margin-top:18px"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a><a href="#" class="social-link"><i class="fab fa-youtube"></i></a></div></div>
-    </div>
-    <div class="footer-bottom"><span>© 2025 Op.Dr. Mazhar Eserdağ. Tüm hakları saklıdır.</span><span>Tasarım ile ❤️ yapıldı</span></div>
-  </div>
-</footer>
-<button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
-<a href="https://wa.me/90" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<div id="footer-placeholder"></div>
 <script src="main.js"></script>
 </body>
 </html>
