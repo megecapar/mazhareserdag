@@ -23,6 +23,7 @@ Promise.all([
   initScrollTop();
   initFadeIn();
   setActiveNavLink();
+  initRandevuForm(); // ✅ eklendi
 });
 
 /* ── NAVBAR MOBILE ── */
@@ -84,6 +85,77 @@ function setActiveNavLink() {
     const href = link.getAttribute('href');
     if (href === page || (page === '' && href === 'index.html')) {
       link.classList.add('active');
+    }
+  });
+}
+
+/* ──────────────────────────────────────────
+   ✅ RANDEVU FORMU SUBMIT (Vercel API)
+   Endpoint: /api/randevu  (POST)
+────────────────────────────────────────── */
+function initRandevuForm() {
+  const btn = document.getElementById('randevuGonder');
+  if (!btn) return;
+
+  const getVal = (id) => document.getElementById(id)?.value?.trim() || '';
+  const getRaw = (id) => document.getElementById(id)?.value || '';
+
+  btn.addEventListener('click', async () => {
+    const payload = {
+      ad: getVal('ad'),
+      soyad: getVal('soyad'),
+      telefon: getVal('telefon'),
+      email: getVal('eposta'),
+      tedavi: getRaw('tedavi'),
+      tarih: getRaw('tarih'),
+      mesaj: getVal('mesaj'),
+    };
+
+    // Zorunlu alan kontrolü
+    if (!payload.ad || !payload.soyad || !payload.telefon || !payload.email || !payload.tedavi) {
+      alert('Lütfen Ad, Soyad, Telefon, E-posta ve Tedavi Konusu alanlarını doldurun.');
+      return;
+    }
+
+    // Basit e-posta kontrolü
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
+      alert('Lütfen geçerli bir e-posta adresi girin.');
+      return;
+    }
+
+    // UI durumu
+    btn.disabled = true;
+    const oldHTML = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gönderiliyor...';
+
+    try {
+      const r = await fetch('/api/randevu', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (!r.ok) {
+        const t = await r.text();
+        throw new Error(t || 'Gönderim hatası');
+      }
+
+      alert('Talebiniz alındı. En kısa sürede dönüş yapacağız.');
+
+      // Form temizle
+      ['ad', 'soyad', 'telefon', 'eposta', 'tarih', 'mesaj'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+      });
+      const tedavi = document.getElementById('tedavi');
+      if (tedavi) tedavi.value = '';
+
+    } catch (e) {
+      console.error('Randevu gönderim hatası:', e);
+      alert('Gönderim sırasında bir hata oldu. Lütfen tekrar deneyin.');
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = oldHTML;
     }
   });
 }
