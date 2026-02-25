@@ -17,7 +17,7 @@ export default async function handler(req, res) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Randevu <onboarding@resend.dev>",
+        from: "Randevu Formu <randevu@drmazhareserdag.com>",
         to: process.env.TO_EMAIL,
         subject: "Yeni Randevu Talebi",
         reply_to: email,
