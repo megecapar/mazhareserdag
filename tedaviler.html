@@ -1,53 +1,36 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tedaviler – Op.Dr. Mazhar Eserdağ</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 <style>
-.treatment-detail{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:80px 0;border-bottom:1px solid var(--gray-100)}
+.treatment-detail{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:72px 0;border-bottom:1px solid #eee}
 .treatment-detail:last-child{border-bottom:none}
-.treatment-detail.reverse .treatment-visual{order:2}
-.treatment-visual{background:linear-gradient(145deg,var(--blue-pale),rgba(30,77,183,.08));border-radius:var(--radius);height:360px;display:flex;align-items:center;justify-content:center;font-size:6rem;color:var(--blue-mid);opacity:.35}
-.treatment-badge{display:inline-flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-mid);margin-bottom:14px}
-.treatment-badge::before{content:'';width:20px;height:2px;background:var(--blue-mid);border-radius:2px}
-.treatment-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3vw,2.7rem);font-weight:700;color:var(--gray-900);line-height:1.2;margin-bottom:18px}
-.treatment-desc{font-size:1rem;color:var(--gray-500);line-height:1.9;margin-bottom:26px}
-.treatment-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:30px}
-.treatment-list li{display:flex;align-items:flex-start;gap:10px;font-size:.95rem;color:var(--gray-700)}
-.treatment-list li i{color:var(--blue-mid);font-size:.9rem;margin-top:3px;flex-shrink:0}
-@media(max-width:768px){
-  .treatment-detail,.treatment-detail.reverse .treatment-visual{grid-template-columns:1fr;order:unset}
-  .treatment-detail{gap:30px}
-  .treatment-visual{height:220px;font-size:4rem}
-}
+.treatment-detail.reverse .treatment-visual{order:-1}
+.treatment-visual{background:linear-gradient(145deg,#e8f0fb,rgba(9,96,189,.08));aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:80px;color:#0960bd;opacity:.35}
+.treatment-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e0a833;margin-bottom:12px;font-family:'Montserrat',sans-serif}
+.treatment-badge::before{content:'';width:20px;height:2px;background:#e0a833}
+.treatment-title{font-family:'Montserrat',sans-serif;font-size:clamp(22px,3vw,30px);font-weight:800;color:#022040;line-height:1.2;margin-bottom:16px}
+.treatment-desc{font-size:15px;color:#555;line-height:1.85;margin-bottom:22px}
+.treatment-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.treatment-list li{display:flex;align-items:flex-start;gap:9px;font-size:14px;color:#444}
+.treatment-list li i{color:#0960bd;font-size:.85rem;margin-top:3px;flex-shrink:0}
+.btn-randevu{display:inline-flex;align-items:center;gap:8px;background:#0960bd;color:#fff;padding:13px 28px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:background .2s}
+.btn-randevu:hover{background:#e0a833}
+@media(max-width:768px){.treatment-detail,.treatment-detail.reverse .treatment-visual{grid-template-columns:1fr;order:unset}.treatment-detail{gap:32px}.treatment-visual{aspect-ratio:16/6;font-size:50px}}
 </style>
 </head>
 <body>
+<header class="header-top"><div class="wrapper"><div class="header-brand"><div class="name">Op.Dr. Mazhar Eserdağ</div><div class="spec">Kalp ve Damar Cerrahisi Uzmanı · Akupunktur · Hipnoz · Biorezonans</div></div><div class="header-right"><div class="header-phones"><a href="tel:+905054020504"><i class="fas fa-phone phone-icon"></i> +90 (505) 402 05 04</a></div><div class="header-actions"><a href="iletisim.html" class="action-btn"><i class="fas fa-calendar-check"></i> RANDEVU AL</a></div></div></div></header>
+<nav class="navigation"><div class="wrapper"><button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button><ul class="nav-menus"><li><a href="index.html">Ana Sayfa</a></li><li><a href="kalp-damar.html">Kalp &amp; Damar</a></li><li><a href="akupunktur.html">Akupunktur</a></li><li><a href="hipnoz.html">Hipnoz</a></li><li><a href="biorezonans.html">Biorezonans</a></li><li><a href="vajinismus.html">Vajinismus</a></li><li><a href="varis.html">Varis</a></li><li><a href="stres.html">Stres</a></li><li><a href="butunsel.html">Bütüncül Tıp</a></li><li><a href="hakkimda.html">Hakkımda</a></li><li><a href="blog.html">Blog</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div></nav>
 
-<div id="topbar-placeholder"></div>
-<div id="navbar-placeholder"></div>
+<div class="page-hero"><div class="wrapper"><h1>Tedaviler</h1><nav class="breadcrumb"><a href="index.html">Ana Sayfa</a><i class="fas fa-chevron-right"></i><span>Tedaviler</span></nav></div></div>
 
-<div class="page-hero">
-  <div class="page-hero-inner">
-    <h1>Tedaviler</h1>
-    <nav class="breadcrumb">
-      <a href="index.html">Ana Sayfa</a>
-      <i class="fas fa-chevron-right"></i>
-      <span>Tedaviler</span>
-    </nav>
-  </div>
-</div>
+<section class="section"><div class="wrapper">
 
-<section class="section">
-<div class="container">
-
-<!-- 1 AKUPUNKTUR -->
 <div class="treatment-detail reverse fade-in">
   <div>
     <div class="treatment-badge">Tamamlayıcı Tıp</div>
@@ -56,54 +39,33 @@
     <ul class="treatment-list">
       <li><i class="fas fa-check-circle"></i> Kronik ağrı ve baş ağrısı tedavisi</li>
       <li><i class="fas fa-check-circle"></i> Stres, anksiyete ve uyku bozuklukları</li>
-      <li><i class="fas fa-check-circle"></i> Bağışıklık sistemi destekleme</li>
+      <li><i class="fas fa-check-circle"></i> Bağışıklık sistemi desteği</li>
       <li><i class="fas fa-check-circle"></i> Sindirim sistemi sorunları</li>
-      <li><i class="fas fa-check-circle"></i> Enerji dengesizliği</li>
+      <li><i class="fas fa-check-circle"></i> Auriküloterapi (Kulak Akupunkturu)</li>
     </ul>
-    <a href="iletisim.html" class="btn btn-blue"><i class="fas fa-calendar-check"></i> Randevu Al</a>
+    <a href="iletisim.html" class="btn-randevu"><i class="fas fa-calendar-check"></i> Randevu Al</a>
   </div>
   <div class="treatment-visual"><i class="fas fa-spa"></i></div>
 </div>
 
-<!-- 2 VAJİNİSMUS -->
 <div class="treatment-detail fade-in">
-  <div class="treatment-visual"><i class="fas fa-heart"></i></div>
-  <div>
-    <div class="treatment-badge">Cinsel Sağlık</div>
-    <h2 class="treatment-title">Vajinismus &amp; Cinsel İşlev Bozuklukları</h2>
-    <p class="treatment-desc">2012 yılından bu yana vajinismus ve cinsel işlev bozuklukları tedavisinde yurtiçi ve yurtdışında kapsamlı eğitimler aldım. Modern tıbbi yöntemler ile hipnoz, akupunktur ve biorezonansı bir arada kullanarak kişiye özel, bütüncül bir yaklaşım sunuyorum. 2016 yılında Avrupa Seksoloji Federasyonu (EFS) tarafından Fellow Cinsel Terapist (FECSM) unvanı ve Board Sertifikası almaya hak kazandım.</p>
-    <ul class="treatment-list">
-      <li><i class="fas fa-check-circle"></i> Vajinismus tanı ve tedavisi</li>
-      <li><i class="fas fa-check-circle"></i> Cinsel isteksizlik ve anorgazmi</li>
-      <li><i class="fas fa-check-circle"></i> Cinsel kaygı ve performans sorunları</li>
-      <li><i class="fas fa-check-circle"></i> Çift terapisi ve danışmanlık</li>
-      <li><i class="fas fa-check-circle"></i> Hipnoz destekli cinsel terapi</li>
-    </ul>
-    <a href="iletisim.html" class="btn btn-blue"><i class="fas fa-calendar-check"></i> Randevu Al</a>
-  </div>
-</div>
-
-<!-- 3 BİOREZONANS -->
-<div class="treatment-detail reverse fade-in">
+  <div class="treatment-visual"><i class="fas fa-wave-square"></i></div>
   <div>
     <div class="treatment-badge">Enerji Terapisi</div>
     <h2 class="treatment-title">Biorezonans</h2>
-    <p class="treatment-desc">Bicom Optima teknolojisiyle elektromanyetik frekans temelli analiz ve destek uygulamalarıyla bağışıklık ve enerji dengesi sağlanır.</p>
+    <p class="treatment-desc">Bicom Optima cihazıyla elektromanyetik frekans temelli analiz ve destek uygulamalarıyla bağışıklık ve enerji dengesi sağlanır.</p>
     <ul class="treatment-list">
       <li><i class="fas fa-check-circle"></i> Detoks destek programları</li>
       <li><i class="fas fa-check-circle"></i> Alerji ve intolerans analizleri</li>
       <li><i class="fas fa-check-circle"></i> Sigara bırakma ve kilo yönetimi</li>
-      <li><i class="fas fa-check-circle"></i> Migren, stres ve sınav kaygısı</li>
-      <li><i class="fas fa-check-circle"></i> Bağışıklık destek planı</li>
+      <li><i class="fas fa-check-circle"></i> Kronik yorgunluk ve enerji dengeleme</li>
+      <li><i class="fas fa-check-circle"></i> Sınav kaygısı ve migren desteği</li>
     </ul>
-    <a href="iletisim.html" class="btn btn-blue"><i class="fas fa-calendar-check"></i> Randevu Al</a>
+    <a href="iletisim.html" class="btn-randevu"><i class="fas fa-calendar-check"></i> Randevu Al</a>
   </div>
-  <div class="treatment-visual"><i class="fas fa-wave-square"></i></div>
 </div>
 
-<!-- 4 HİPNOZ -->
-<div class="treatment-detail fade-in">
-  <div class="treatment-visual"><i class="fas fa-brain"></i></div>
+<div class="treatment-detail reverse fade-in">
   <div>
     <div class="treatment-badge">Zihin Terapisi</div>
     <h2 class="treatment-title">Hipnoz Terapisi</h2>
@@ -115,50 +77,64 @@
       <li><i class="fas fa-check-circle"></i> Kilo yönetimi</li>
       <li><i class="fas fa-check-circle"></i> Hipnotik Yeniden İşleme Terapisi (HYT)</li>
     </ul>
-    <a href="iletisim.html" class="btn btn-blue"><i class="fas fa-calendar-check"></i> Randevu Al</a>
+    <a href="iletisim.html" class="btn-randevu"><i class="fas fa-calendar-check"></i> Randevu Al</a>
   </div>
+  <div class="treatment-visual"><i class="fas fa-brain"></i></div>
 </div>
 
-<!-- 5 KUPA -->
-<div class="treatment-detail reverse fade-in">
-  <div>
-    <div class="treatment-badge">Tamamlayıcı Uygulama</div>
-    <h2 class="treatment-title">Kupa Uygulamaları</h2>
-    <p class="treatment-desc">Dolaşım destekleyici ve kas gevşetici uygulamalar kişiye özel planlanır.</p>
-    <ul class="treatment-list">
-      <li><i class="fas fa-check-circle"></i> Kas gevşetme desteği</li>
-      <li><i class="fas fa-check-circle"></i> Boyun ve sırt rahatlatma</li>
-      <li><i class="fas fa-check-circle"></i> Dolaşım sistemi desteği</li>
-      <li><i class="fas fa-check-circle"></i> Ön değerlendirme ve seans planlaması</li>
-      <li><i class="fas fa-check-circle"></i> Seans sonrası öneriler</li>
-    </ul>
-    <a href="iletisim.html" class="btn btn-blue"><i class="fas fa-calendar-check"></i> Randevu Al</a>
-  </div>
-  <div class="treatment-visual"><i class="fas fa-hand-holding-medical"></i></div>
-</div>
-
-<!-- 6 CERRAHİ -->
 <div class="treatment-detail fade-in">
   <div class="treatment-visual"><i class="fas fa-heartbeat"></i></div>
   <div>
     <div class="treatment-badge">Cerrahi Uzmanlık</div>
     <h2 class="treatment-title">Kalp &amp; Damar Cerrahisi</h2>
-    <p class="treatment-desc">Kalp ve damar hastalıklarının tanı ve tedavisinde kapsamlı cerrahi ve medikal yaklaşımlar. Kılcal varis, köpük tedavisi, lazer ve skleroterapi uygulamaları da sunulmaktadır.</p>
+    <p class="treatment-desc">Kalp ve damar hastalıklarının tanı ve tedavisinde kapsamlı cerrahi ve medikal yaklaşımlar.</p>
     <ul class="treatment-list">
-      <li><i class="fas fa-check-circle"></i> Koroner arter değerlendirmesi</li>
+      <li><i class="fas fa-check-circle"></i> Koroner bypass değerlendirmesi</li>
       <li><i class="fas fa-check-circle"></i> Periferik damar hastalıkları</li>
-      <li><i class="fas fa-check-circle"></i> Kılcal varis, köpük ve lazer tedavisi</li>
+      <li><i class="fas fa-check-circle"></i> Kalp kapak konsültasyonu</li>
       <li><i class="fas fa-check-circle"></i> Kardiyovasküler risk yönetimi</li>
       <li><i class="fas fa-check-circle"></i> Ameliyat öncesi ve sonrası takip</li>
     </ul>
-    <a href="iletisim.html" class="btn btn-blue"><i class="fas fa-calendar-check"></i> Randevu Al</a>
+    <a href="iletisim.html" class="btn-randevu"><i class="fas fa-calendar-check"></i> Randevu Al</a>
   </div>
 </div>
 
+<div class="treatment-detail reverse fade-in">
+  <div>
+    <div class="treatment-badge">Cinsel Sağlık</div>
+    <h2 class="treatment-title">Vajinismus &amp; Cinsel Sağlık</h2>
+    <p class="treatment-desc">Modern tıbbi yaklaşımların yanı sıra hipnoz, akupunktur ve tamamlayıcı yöntemlerle kişiye özel vajinismus ve cinsel sağlık tedavileri.</p>
+    <ul class="treatment-list">
+      <li><i class="fas fa-check-circle"></i> Vajinismus tedavisi</li>
+      <li><i class="fas fa-check-circle"></i> Cinsel işlev bozuklukları</li>
+      <li><i class="fas fa-check-circle"></i> Cinsel isteksizlik tedavisi</li>
+      <li><i class="fas fa-check-circle"></i> İlk gece korkusu</li>
+    </ul>
+    <a href="iletisim.html" class="btn-randevu"><i class="fas fa-calendar-check"></i> Randevu Al</a>
+  </div>
+  <div class="treatment-visual"><i class="fas fa-heart"></i></div>
 </div>
-</section>
 
-<div id="footer-placeholder"></div>
-<script src="main.js"></script>
-</body>
-</html>
+<div class="treatment-detail fade-in">
+  <div class="treatment-visual"><i class="fas fa-tint"></i></div>
+  <div>
+    <div class="treatment-badge">Damar Sağlığı</div>
+    <h2 class="treatment-title">Varis &amp; Damar Tedavileri</h2>
+    <p class="treatment-desc">Kılcal varis, köpük tedavisi (foam skleroterapi), lazer ve skleroterapi uygulamalarıyla estetik ve fonksiyonel varis tedavileri.</p>
+    <ul class="treatment-list">
+      <li><i class="fas fa-check-circle"></i> Kılcal varis skleroterapi</li>
+      <li><i class="fas fa-check-circle"></i> Köpük tedavisi (foam)</li>
+      <li><i class="fas fa-check-circle"></i> Lazer varis tedavisi</li>
+      <li><i class="fas fa-check-circle"></i> Görünür damarların estetik tedavisi</li>
+    </ul>
+    <a href="iletisim.html" class="btn-randevu"><i class="fas fa-calendar-check"></i> Randevu Al</a>
+  </div>
+</div>
+
+</div></section>
+
+<footer class="footer"><div class="footer-top"><div class="wrapper"><div class="footer-brand">OP.DR. MAZHAR ESERDAĞ</div><div class="footer-phones"><a href="tel:+905054020504">+90 (505) 402 05 04</a></div><div class="footer-social"><a href="https://www.instagram.com/drmazhareserdag/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a><a href="https://wa.me/905551939445" target="_blank" style="background:#25d366" class="youtube"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-main"><div class="wrapper"><div class="footer-cols"><div class="footer-col"><h4>SAYFALAR</h4><ul><li><a href="index.html">Ana Sayfa</a></li><li><a href="hakkimda.html">Hakkımda</a></li><li><a href="blog.html">Blog</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div><div class="footer-col"><h4>TEDAVİLER</h4><ul><li><a href="tedaviler.html">Kalp &amp; Damar</a></li><li><a href="tedaviler.html">Akupunktur</a></li><li><a href="tedaviler.html">Hipnoz</a></li><li><a href="tedaviler.html">Biorezonans</a></li></ul></div><div class="footer-col"><h4>İLETİŞİM</h4><ul><li><a href="#">Talatpaşa Bulvarı No 42/4, Alsancak / İzmir</a></li><li><a href="tel:+905054020504">+90 (505) 402 05 04</a></li></ul></div></div></div></div><div class="footer-bottom"><div class="wrapper">© 2025 Op.Dr. Mazhar Eserdağ. Tüm Hakları Saklıdır.</div></div></footer>
+<a href="https://wa.me/905551939445" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body></html>

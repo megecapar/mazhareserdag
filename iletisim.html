@@ -2,136 +2,99 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>İletişim – Op.Dr. Mazhar Eserdağ</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+<title>İletişim &amp; Randevu – Op.Dr. Mazhar Eserdağ</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 <style>
-.contact-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
-.contact-info-cards{display:flex;flex-direction:column;gap:14px;margin-top:32px}
-.contact-info-card{background:var(--gray-50);border:1px solid var(--gray-100);border-radius:var(--radius);padding:18px 22px;display:flex;align-items:flex-start;gap:14px;transition:box-shadow var(--transition)}
-.contact-info-card:hover{box-shadow:var(--shadow-sm)}
-.contact-card-icon{width:42px;height:42px;border-radius:10px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.contact-card-icon i{color:var(--blue-mid);font-size:.95rem}
-.contact-card-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:3px}
-.contact-card-value{font-size:.93rem;color:var(--gray-700);font-weight:500;line-height:1.5}
-.hours-grid{display:flex;flex-direction:column;gap:4px;margin-top:6px}
-.hours-row{font-size:.83rem;color:#475569;display:flex;gap:8px}
-.hours-day{font-weight:600;color:var(--gray-700);min-width:140px}
-.contact-form-box{background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius);padding:44px 38px;box-shadow:var(--shadow-sm)}
-.contact-form-box h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--gray-900);margin-bottom:6px}
-.contact-form-box>p{font-size:.9rem;color:var(--gray-500);margin-bottom:28px}
+.contact-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:start}
+.contact-info-cards{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+.contact-info-card{background:#f5f7fa;border:1px solid #e0e4e8;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;transition:box-shadow .2s}
+.contact-info-card:hover{box-shadow:0 2px 12px rgba(9,96,189,.1)}
+.contact-card-icon{width:42px;height:42px;background:#e8f0fb;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-card-icon i{color:#0960bd;font-size:.9rem}
+.contact-card-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#999;margin-bottom:4px;font-family:'Montserrat',sans-serif}
+.contact-card-value{font-size:.92rem;color:#333;font-weight:500;line-height:1.5}
+.contact-card-value a{color:#0960bd;transition:color .2s}.contact-card-value a:hover{color:#e0a833}
+.hours-row{font-size:13px;color:#555;display:flex;gap:8px;margin-top:3px}
+.hours-day{font-weight:600;color:#333;min-width:130px}
+.contact-form-box{background:#fff;border:1px solid #e0e4e8;padding:40px 36px;box-shadow:0 2px 20px rgba(9,96,189,.07)}
+.contact-form-box h3{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:#022040;margin-bottom:6px}
+.contact-form-box>p{font-size:14px;color:#888;margin-bottom:24px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .form-group{margin-bottom:16px}
-.form-group label{display:block;font-size:.78rem;font-weight:600;color:var(--gray-700);margin-bottom:6px;letter-spacing:.03em}
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:11px 14px;border:1.5px solid var(--gray-200);border-radius:8px;font-family:var(--font-body);font-size:.9rem;color:var(--gray-900);background:var(--white);outline:none;transition:border-color var(--transition),box-shadow var(--transition)}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(30,77,183,.1)}
+.form-group label{display:block;font-size:11px;font-weight:700;color:#555;margin-bottom:6px;letter-spacing:.06em;text-transform:uppercase;font-family:'Montserrat',sans-serif}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:11px 14px;border:1.5px solid #e0e4e8;font-family:'Open Sans',sans-serif;font-size:14px;color:#333;background:#fff;outline:none;transition:border-color .2s,box-shadow .2s}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:#0960bd;box-shadow:0 0 0 3px rgba(9,96,189,.1)}
 .form-group textarea{resize:vertical;min-height:110px}
-.form-submit{width:100%;padding:14px;background:linear-gradient(135deg,var(--blue-mid),var(--blue-light));color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:.9rem;font-weight:600;letter-spacing:.04em;cursor:pointer;transition:opacity var(--transition),transform var(--transition);display:flex;align-items:center;justify-content:center;gap:10px}
-.form-submit:hover{opacity:.9;transform:translateY(-1px)}
-.map-wrap{margin-top:60px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm)}
+.form-submit{width:100%;padding:14px;background:#0960bd;color:#fff;border:none;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s;display:flex;align-items:center;justify-content:center;gap:10px}
+.form-submit:hover{background:#e0a833}
+.map-wrap{margin-top:56px}
 .map-wrap iframe{display:block;width:100%;height:400px;border:0}
-.map-placeholder{background:linear-gradient(135deg,#c8dff5,#e8f2fb);height:400px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--blue-mid)}
-.map-placeholder i{font-size:3rem;opacity:.4;display:block;margin-bottom:12px}
-.map-placeholder p{font-size:.9rem;opacity:.6}
-@media(max-width:1024px){.contact-layout{grid-template-columns:1fr;gap:40px}}
+@media(max-width:1024px){.contact-layout{grid-template-columns:1fr;gap:36px}}
 @media(max-width:640px){.contact-form-box{padding:24px 18px}.form-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<header class="header-top"><div class="wrapper"><div class="header-brand"><div class="name">Op.Dr. Mazhar Eserdağ</div><div class="spec">Kalp ve Damar Cerrahisi Uzmanı · Akupunktur · Hipnoz · Biorezonans</div></div><div class="header-right"><div class="header-phones"><a href="tel:+905054020504"><i class="fas fa-phone phone-icon"></i> +90 (505) 402 05 04</a></div><div class="header-actions"><a href="iletisim.html" class="action-btn"><i class="fas fa-calendar-check"></i> RANDEVU AL</a></div></div></div></header>
+<nav class="navigation"><div class="wrapper"><button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button><ul class="nav-menus"><li><a href="index.html">Ana Sayfa</a></li><li><a href="kalp-damar.html">Kalp &amp; Damar</a></li><li><a href="akupunktur.html">Akupunktur</a></li><li><a href="hipnoz.html">Hipnoz</a></li><li><a href="biorezonans.html">Biorezonans</a></li><li><a href="vajinismus.html">Vajinismus</a></li><li><a href="varis.html">Varis</a></li><li><a href="stres.html">Stres</a></li><li><a href="butunsel.html">Bütüncül Tıp</a></li><li><a href="hakkimda.html">Hakkımda</a></li><li><a href="blog.html">Blog</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div></nav>
 
-<div id="topbar-placeholder"></div>
-<div id="navbar-placeholder"></div>
+<div class="page-hero"><div class="wrapper"><h1>İletişim &amp; Randevu</h1><nav class="breadcrumb"><a href="index.html">Ana Sayfa</a><i class="fas fa-chevron-right"></i><span>İletişim</span></nav></div></div>
 
-<div class="page-hero">
-  <div class="page-hero-inner">
-    <h1>İletişim &amp; Randevu</h1>
-    <nav class="breadcrumb"><a href="index.html">Ana Sayfa</a><i class="fas fa-chevron-right"></i><span>İletişim</span></nav>
-  </div>
-</div>
-
-<section class="section"><div class="container">
+<section class="section"><div class="wrapper">
   <div class="contact-layout">
     <div class="fade-in">
-      <div class="section-label">Bize Ulaşın</div>
-      <h2 class="section-title">İletişim <em>Bilgileri</em></h2>
-      <p class="section-desc">Randevu almak veya bilgi için aşağıdaki kanalları kullanabilirsiniz.</p>
+      <div class="sec-label">Bize Ulaşın</div>
+      <h2 class="sec-title">İletişim <em>Bilgileri</em></h2>
+      <p style="font-size:14px;color:#666;line-height:1.7">Randevu almak veya bilgi için aşağıdaki kanalları kullanabilirsiniz. WhatsApp üzerinden de hızlıca ulaşabilirsiniz.</p>
       <div class="contact-info-cards">
-        <div class="contact-info-card"><div class="contact-card-icon"><i class="fas fa-phone"></i></div><div><div class="contact-card-label">Telefon</div><div class="contact-card-value"><a href="tel:+905001234567">+90 (505) 402 05 04</a></div></div></div>
-        <div class="contact-info-card"><div class="contact-card-icon"><i class="fas fa-envelope"></i></div><div><div class="contact-card-label">E-posta</div><div class="contact-card-value"><a href="mailto:info@mazharesserdag.com">mmazhareserdag@yahoo.com</a></div></div></div>
-        <div class="contact-info-card"><div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="contact-card-label">Adres</div>Talatpaşa bulvarı No 42/4 (Uyar apt kat:2 daire:4) Alsancak/İzmir<div class="contact-card-value"><br><small style="color:var(--gray-500);font-size:.82rem"></small></div></div></div>
-        <div class="contact-info-card"><div class="contact-card-icon"><i class="fas fa-clock"></i></div><div><div class="contact-card-label">Çalışma Saatleri</div><div class="hours-grid"><div class="hours-row"><span class="hours-day">Pazartesi – Cuma</span><span>09:00 – 18:00</span></div><div class="hours-row"><span class="hours-day">Cumartesi</span><span>09:00 – 14:00</span></div><div class="hours-row"><span class="hours-day">Pazar</span><span>Kapalı</span></div></div></div></div>
-        <div class="contact-info-card"><div class="contact-card-icon"><i class="fab fa-whatsapp"></i></div><div><div class="contact-card-label">WhatsApp</div><div class="contact-card-value"><a href="https://wa.me/905551939445" target="_blank">WhatsApp'tan Mesaj Gönder</a></div></div></div>
+        <div class="contact-info-card"><div class="contact-card-icon"><i class="fas fa-phone"></i></div><div><div class="contact-card-label">Telefon</div><div class="contact-card-value"><a href="tel:+905054020504">+90 (505) 402 05 04</a></div></div></div>
+        <div class="contact-info-card"><div class="contact-card-icon"><i class="fas fa-envelope"></i></div><div><div class="contact-card-label">E-posta</div><div class="contact-card-value"><a href="mailto:mmazhareserdag@yahoo.com">mmazhareserdag@yahoo.com</a></div></div></div>
+        <div class="contact-info-card"><div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="contact-card-label">Adres</div><div class="contact-card-value">Talatpaşa Bulvarı No 42/4<br>(Uyar Apt. Kat:2 Daire:4)<br>Alsancak / İzmir</div></div></div>
+        <div class="contact-info-card"><div class="contact-card-icon"><i class="fas fa-clock"></i></div><div><div class="contact-card-label">Çalışma Saatleri</div><div class="hours-row"><span class="hours-day">Pazartesi – Cuma</span><span>09:00 – 18:00</span></div><div class="hours-row"><span class="hours-day">Cumartesi</span><span>09:00 – 14:00</span></div><div class="hours-row"><span class="hours-day">Pazar</span><span>Kapalı</span></div></div></div>
+        <div class="contact-info-card"><div class="contact-card-icon"><i class="fab fa-whatsapp"></i></div><div><div class="contact-card-label">WhatsApp</div><div class="contact-card-value"><a href="https://wa.me/905551939445" target="_blank">+90 (555) 193 94 45 — Mesaj Gönder</a></div></div></div>
       </div>
     </div>
-   <div class="contact-form-box fade-in d2">
-  <h3>Randevu Formu</h3>
-  <p>Formu doldurun, en kısa sürede geri dönelim.</p>
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="ad">Ad</label>
-      <input id="ad" type="text" placeholder="Adınız" required>
+    <div class="contact-form-box fade-in d2">
+      <h3>Randevu Formu</h3>
+      <p>Formu doldurun, en kısa sürede geri dönelim.</p>
+      <form onsubmit="submitForm(event)">
+        <div class="form-row">
+          <div class="form-group"><label>Ad</label><input type="text" placeholder="Adınız" required></div>
+          <div class="form-group"><label>Soyad</label><input type="text" placeholder="Soyadınız"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Telefon</label><input type="tel" placeholder="05xx xxx xx xx" required></div>
+          <div class="form-group"><label>E-posta</label><input type="email" placeholder="ornek@email.com"></div>
+        </div>
+        <div class="form-group"><label>Tedavi Konusu</label>
+          <select>
+            <option value="">Seçiniz...</option>
+            <option>Kalp &amp; Damar Cerrahisi</option>
+            <option>Akupunktur</option>
+            <option>Hipnoz Terapisi</option>
+            <option>Biorezonans</option>
+            <option>Vajinismus Tedavisi</option>
+            <option>Varis Tedavisi</option>
+            <option>Stres Yönetimi</option>
+            <option>Genel Danışmanlık</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Randevu Tarihi Tercihi</label><input type="date"></div>
+        <div class="form-group"><label>Mesajınız</label><textarea placeholder="Şikayetlerinizi veya sormak istediklerinizi yazabilirsiniz..."></textarea></div>
+        <button class="form-submit" type="submit" id="formSubmit"><i class="fas fa-paper-plane"></i> Randevu Talebi Gönder</button>
+      </form>
     </div>
-    <div class="form-group">
-      <label for="soyad">Soyad</label>
-      <input id="soyad" type="text" placeholder="Soyadınız" required>
-    </div>
   </div>
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="telefon">Telefon</label>
-      <input id="telefon" type="tel" placeholder="05xx xxx xx xx" required>
-    </div>
-    <div class="form-group">
-      <label for="eposta">E-posta</label>
-      <input id="eposta" type="email" placeholder="ornek@email.com" required>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="tedavi">Tedavi Konusu</label>
-    <select id="tedavi" required>
-      <option value="">Seçiniz...</option>
-      <option>Kalp &amp; Damar Cerrahisi</option>
-      <option>Akupunktur</option>
-      <option>Hipnoz Terapisi</option>
-      <option>Biorezonans</option>
-      <option>Kupa Uygulamaları</option>
-      <option>Genel Danışmanlık</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label for="tarih">Randevu Tarihi Tercihi</label>
-    <input id="tarih" type="date">
-  </div>
-
-  <div class="form-group">
-    <label for="mesaj">Mesajınız</label>
-    <textarea id="mesaj" placeholder="Şikayetlerinizi veya sormak istediklerinizi yazabilirsiniz..."></textarea>
-  </div>
-
-  <button id="randevuGonder" class="form-submit" type="button">
-    <i class="fas fa-paper-plane"></i> Randevu Talebi Gönder
-  </button>
-</div>
-  </div>
-
-  <!-- HARİTA -->
   <div class="map-wrap fade-in">
-<iframe 
-  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3125.2748499826475!2d27.14102707591469!3d38.435119971826374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzjCsDI2JzA2LjQiTiAyN8KwMDgnMzcuMCJF!5e0!3m2!1str!2str!4v1771957178737!5m2!1str!2str"
-  width="100%" 
-  height="450" 
-  style="border:0; display:block;" 
-  allowfullscreen="" 
-  loading="lazy">
-</iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3125.2748499826475!2d27.14102707591469!3d38.435119971826374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzjCsDI2JzA2LjQiTiAyN8KwMDgnMzcuMCJF!5e0!3m2!1str!2str!4v1771957178737!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+  </div>
 </div></section>
 
-<div id="footer-placeholder"></div>
-<script src="main.js"></script>
-</body>
-</html>
+<footer class="footer"><div class="footer-top"><div class="wrapper"><div class="footer-brand">OP.DR. MAZHAR ESERDAĞ</div><div class="footer-phones"><a href="tel:+905054020504">+90 (505) 402 05 04</a></div><div class="footer-social"><a href="https://www.instagram.com/drmazhareserdag/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a><a href="https://wa.me/905551939445" target="_blank" style="background:#25d366" class="youtube"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-main"><div class="wrapper"><div class="footer-cols"><div class="footer-col"><h4>SAYFALAR</h4><ul><li><a href="index.html">Ana Sayfa</a></li><li><a href="hakkimda.html">Hakkımda</a></li><li><a href="tedaviler.html">Tedaviler</a></li><li><a href="blog.html">Blog</a></li></ul></div><div class="footer-col"><h4>TEDAVİLER</h4><ul><li><a href="tedaviler.html">Kalp &amp; Damar</a></li><li><a href="tedaviler.html">Akupunktur</a></li><li><a href="tedaviler.html">Hipnoz</a></li><li><a href="tedaviler.html">Biorezonans</a></li></ul></div><div class="footer-col"><h4>İLETİŞİM</h4><ul><li><a href="#">Talatpaşa Bulvarı No 42/4, Alsancak / İzmir</a></li><li><a href="tel:+905054020504">+90 (505) 402 05 04</a></li></ul></div></div></div></div><div class="footer-bottom"><div class="wrapper">© 2025 Op.Dr. Mazhar Eserdağ. Tüm Hakları Saklıdır.</div></div></footer>
+<a href="https://wa.me/905551939445" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body></html>
