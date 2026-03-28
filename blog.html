@@ -5,81 +5,183 @@
 <title>Blog – Op.Dr. Mazhar Eserdağ</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="css/style.css">
-<style>
-.blog-layout{display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:start}
-.blog-grid-full{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.blog-card{border:1px solid #e8ecf0;border-top:3px solid #0960bd;overflow:hidden;transition:box-shadow .2s,transform .2s,border-top-color .2s}
-.blog-card:hover{box-shadow:0 6px 24px rgba(9,96,189,.1);transform:translateY(-3px);border-top-color:#e0a833}
-.blog-img{height:190px;background:linear-gradient(135deg,#e8f0fb,rgba(9,96,189,.1));display:flex;align-items:center;justify-content:center;font-size:2.8rem;color:#0960bd;opacity:.5}
-.blog-body{padding:22px}
-.blog-cat{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e0a833;margin-bottom:9px;font-family:'Montserrat',sans-serif}
-.blog-title{font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:800;color:#022040;line-height:1.35;margin-bottom:9px}
-.blog-excerpt{font-size:.86rem;color:#666;line-height:1.7}
-.blog-meta{display:flex;align-items:center;gap:14px;margin-top:14px;padding-top:12px;border-top:1px solid #eee;font-size:.75rem;color:#999}
-.blog-meta i{color:#e0a833}
-.read-more{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:.76rem;font-weight:700;color:#0960bd;font-family:'Montserrat',sans-serif;letter-spacing:.06em;text-transform:uppercase;transition:gap .2s,color .2s}
-.read-more:hover{gap:10px;color:#e0a833}
-.sidebar-widget{background:#f5f7fa;border:1px solid #e0e4e8;padding:22px;margin-bottom:18px}
-.sidebar-widget h4{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;color:#022040;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #0960bd;letter-spacing:.12em;text-transform:uppercase}
-.cat-list{display:flex;flex-direction:column;gap:4px}
-.cat-list a{display:flex;align-items:center;justify-content:space-between;font-size:.87rem;color:#444;padding:8px 10px;transition:all .2s}
-.cat-list a:hover{background:#e8f0fb;color:#0960bd}
-.cat-list a span{font-size:.72rem;background:#0960bd;color:#fff;padding:2px 8px;border-radius:20px}
-.recent-post{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #eee}
-.recent-post:last-child{border-bottom:none}
-.recent-post-img{width:50px;height:50px;border-radius:4px;background:#e8f0fb;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;color:#0960bd;opacity:.6}
-.recent-post-title{font-size:.82rem;font-weight:600;color:#022040;line-height:1.35;margin-bottom:3px}
-.recent-post-date{font-size:.72rem;color:#999}
-@media(max-width:1024px){.blog-layout{grid-template-columns:1fr}}
-@media(max-width:640px){.blog-grid-full{grid-template-columns:1fr}}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-<header class="header-top"><div class="wrapper"><div class="header-brand"><div class="name">Op.Dr. Mazhar Eserdağ</div><div class="spec">Kalp ve Damar Cerrahisi Uzmanı · Akupunktur · Hipnoz · Biorezonans</div></div><div class="header-right"><div class="header-phones"><a href="tel:+905054020504"><i class="fas fa-phone phone-icon"></i> +90 (505) 402 05 04</a></div><div class="header-actions"><a href="iletisim.html" class="action-btn"><i class="fas fa-calendar-check"></i> RANDEVU AL</a></div></div></div></header>
-<nav class="navigation"><div class="wrapper"><button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button><ul class="nav-menus"><li><a href="index.html">Ana Sayfa</a></li><li><a href="kalp-damar.html">Kalp &amp; Damar</a></li><li><a href="akupunktur.html">Akupunktur</a></li><li><a href="hipnoz.html">Hipnoz</a></li><li><a href="biorezonans.html">Biorezonans</a></li><li><a href="vajinismus.html">Vajinismus</a></li><li><a href="varis.html">Varis</a></li><li><a href="stres.html">Stres</a></li><li><a href="butunsel.html">Bütüncül Tıp</a></li><li><a href="hakkimda.html">Hakkımda</a></li><li><a href="blog.html">Blog</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div></nav>
-
-<div class="page-hero"><div class="wrapper"><h1>Blog</h1><nav class="breadcrumb"><a href="index.html">Ana Sayfa</a><i class="fas fa-chevron-right"></i><span>Blog</span></nav></div></div>
-
-<section class="section"><div class="wrapper"><div class="blog-layout">
-  <div>
-    <div class="blog-grid-full">
-      <div class="blog-card fade-in d1"><div class="blog-img"><i class="fas fa-heartbeat"></i></div><div class="blog-body"><div class="blog-cat">Kalp Sağlığı</div><h3 class="blog-title">Akupunktur'un Kalp Sağlığına Etkileri</h3><p class="blog-excerpt">Akupunktur tedavisinin kardiyovasküler sistem üzerindeki olumlu etkileri ve klinik bulgular.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 15 Ocak 2025</span><span><i class="far fa-clock"></i> 5 dk</span></div><a href="#" class="read-more">DEVAMINI OKU <i class="fas fa-caret-right"></i></a></div></div>
-      <div class="blog-card fade-in d2"><div class="blog-img"><i class="fas fa-brain"></i></div><div class="blog-body"><div class="blog-cat">Stres &amp; Zihin</div><h3 class="blog-title">Hipnoz ile Stres Yönetimi</h3><p class="blog-excerpt">Hipnoterapi seanslarının stres ve kaygı üzerindeki etkileri; bilimsel temeller.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 8 Ocak 2025</span><span><i class="far fa-clock"></i> 7 dk</span></div><a href="#" class="read-more">DEVAMINI OKU <i class="fas fa-caret-right"></i></a></div></div>
-      <div class="blog-card fade-in d1"><div class="blog-img"><i class="fas fa-wave-square"></i></div><div class="blog-body"><div class="blog-cat">Biorezonans</div><h3 class="blog-title">Biorezonans Nedir, Ne İşe Yarar?</h3><p class="blog-excerpt">Biorezonans terapisinin çalışma prensipleri ve sağlık üzerindeki potansiyel yararları.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 2 Ocak 2025</span><span><i class="far fa-clock"></i> 6 dk</span></div><a href="#" class="read-more">DEVAMINI OKU <i class="fas fa-caret-right"></i></a></div></div>
-      <div class="blog-card fade-in d2"><div class="blog-img"><i class="fas fa-spa"></i></div><div class="blog-body"><div class="blog-cat">Akupunktur</div><h3 class="blog-title">Akupunktur Seansından Ne Beklenir?</h3><p class="blog-excerpt">İlk akupunktur seansınıza gitmeden önce bilmeniz gerekenler.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 20 Aralık 2024</span><span><i class="far fa-clock"></i> 4 dk</span></div><a href="#" class="read-more">DEVAMINI OKU <i class="fas fa-caret-right"></i></a></div></div>
-      <div class="blog-card fade-in d1"><div class="blog-img"><i class="fas fa-heartbeat"></i></div><div class="blog-body"><div class="blog-cat">Kalp Sağlığı</div><h3 class="blog-title">Kalp Hastalıklarından Korunma</h3><p class="blog-excerpt">Kardiyovasküler hastalıkları önlemenin en etkili yolları.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 10 Aralık 2024</span><span><i class="far fa-clock"></i> 8 dk</span></div><a href="#" class="read-more">DEVAMINI OKU <i class="fas fa-caret-right"></i></a></div></div>
-      <div class="blog-card fade-in d2"><div class="blog-img"><i class="fas fa-balance-scale"></i></div><div class="blog-body"><div class="blog-cat">Bütüncül Tıp</div><h3 class="blog-title">Bütüncül Tıp Nedir?</h3><p class="blog-excerpt">Bütüncül tıp anlayışının temelleri ve geleneksel tıptan farkları.</p><div class="blog-meta"><span><i class="far fa-calendar"></i> 1 Aralık 2024</span><span><i class="far fa-clock"></i> 5 dk</span></div><a href="#" class="read-more">DEVAMINI OKU <i class="fas fa-caret-right"></i></a></div></div>
-    </div>
-  </div>
-  <div>
-    <div class="sidebar-widget fade-in d3">
-      <h4>Kategoriler</h4>
-      <div class="cat-list">
-        <a href="#">Kalp Sağlığı <span>4</span></a>
-        <a href="#">Akupunktur <span>6</span></a>
-        <a href="#">Hipnoz <span>3</span></a>
-        <a href="#">Biorezonans <span>4</span></a>
-        <a href="#">Stres Yönetimi <span>5</span></a>
-        <a href="#">Bütüncül Tıp <span>7</span></a>
+<body><header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="phone">
+        <a href="tel:+905054020504">+90 (505) 402 05 04</a>
+        <i class="fa fa-phone"></i>
+        <a href="tel:+905551939445">+90 (555) 193 94 45</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px">
+        <div class="social-icons">
+          <a href="https://wa.me/905551939445" target="_blank" class="wa"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/drmazhareserdag/" target="_blank" class="ig"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/mazhar.eserdag" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <ul style="display:flex;gap:10px;list-style:none">
+          <li><a href="index.html" style="display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:#555"><img src="https://www.eserdag.com/images/tr.jpg" alt="TR" width="24" height="16" style="border-radius:2px"><strong>Türkçe</strong></a></li>
+          <li><a href="#" style="display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:#555"><img src="https://www.eserdag.com/images/en.jpg" alt="EN" width="24" height="16" style="border-radius:2px"><strong>English</strong></a></li>
+        </ul>
       </div>
     </div>
-    <div class="sidebar-widget fade-in d3">
-      <h4>Son Yazılar</h4>
-      <div class="recent-post"><div class="recent-post-img"><i class="fas fa-heartbeat"></i></div><div><div class="recent-post-title">Akupunktur'un Kalp Sağlığına Etkileri</div><div class="recent-post-date">15 Ocak 2025</div></div></div>
-      <div class="recent-post"><div class="recent-post-img"><i class="fas fa-brain"></i></div><div><div class="recent-post-title">Hipnoz ile Stres Yönetimi</div><div class="recent-post-date">8 Ocak 2025</div></div></div>
-      <div class="recent-post"><div class="recent-post-img"><i class="fas fa-wave-square"></i></div><div><div class="recent-post-title">Biorezonans Nedir?</div><div class="recent-post-date">2 Ocak 2025</div></div></div>
-    </div>
-    <div class="sidebar-widget fade-in d4">
-      <h4>Randevu Al</h4>
-      <p style="font-size:.86rem;color:#666;margin-bottom:14px;line-height:1.6">Sağlığınız için doğru adımı atın.</p>
-      <a href="iletisim.html" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#0960bd;color:#fff;padding:12px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:background .2s" onmouseover="this.style.background='#e0a833'" onmouseout="this.style.background='#0960bd'"><i class="fas fa-calendar-check"></i> Randevu Al</a>
+  </div>
+  <div class="header-brand">
+    <div class="container">
+      <div class="brand-info">
+        <div class="name">Op.Dr. Mazhar Eserdağ</div>
+        <div class="spec">Akupunktur · Hipnoz · Biorezonans · Vajinismus Uzmanı</div>
+      </div>
+      <div class="links">
+        <a href="videolar.html"><i class="fa fa-play-circle" style="font-size:20px"></i> VİDEOLAR</a>
+        <a href="iletisim.html"><i class="fa fa-phone-alt" style="font-size:18px"></i> RANDEVU AL</a>
+      </div>
     </div>
   </div>
-</div></div></section>
-
-<footer class="footer"><div class="footer-top"><div class="wrapper"><div class="footer-brand">OP.DR. MAZHAR ESERDAĞ</div><div class="footer-phones"><a href="tel:+905054020504">+90 (505) 402 05 04</a></div><div class="footer-social"><a href="https://www.instagram.com/drmazhareserdag/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a><a href="https://wa.me/905551939445" target="_blank" style="background:#25d366" class="youtube"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-main"><div class="wrapper"><div class="footer-cols"><div class="footer-col"><h4>SAYFALAR</h4><ul><li><a href="index.html">Ana Sayfa</a></li><li><a href="hakkimda.html">Hakkımda</a></li><li><a href="tedaviler.html">Tedaviler</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div><div class="footer-col"><h4>TEDAVİLER</h4><ul><li><a href="tedaviler.html">Kalp &amp; Damar</a></li><li><a href="tedaviler.html">Akupunktur</a></li><li><a href="tedaviler.html">Hipnoz</a></li><li><a href="tedaviler.html">Biorezonans</a></li></ul></div><div class="footer-col"><h4>İLETİŞİM</h4><ul><li><a href="#">Talatpaşa Bulvarı No 42/4, Alsancak / İzmir</a></li><li><a href="tel:+905054020504">+90 (505) 402 05 04</a></li></ul></div></div></div></div><div class="footer-bottom"><div class="wrapper">© 2025 Op.Dr. Mazhar Eserdağ. Tüm Hakları Saklıdır.</div></div></footer>
-<a href="https://wa.me/905551939445" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+</header><nav class="navigation">
+  <div class="container">
+    <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+    <ul class="menus"><li><a href="index.html"><img src="https://www.eserdag.com/images/home.svg" alt="Ana Sayfa" width="26" height="26"></a></li>
+      <li><a href="vajinismus.html">Vajinismus</a></li>
+      <li><a href="biorezonans.html">Biorezonans</a></li>
+      <li><a href="akupunktur.html">Akupunktur</a></li>
+      <li><a href="hipnoz.html">Hipnoz</a></li>
+      <li><a href="kupa.html">Kupa Uygulamaları</a></li>
+      <li><a href="hakkimda.html">Hakkımda</a></li>
+      <li class="active"><a href="blog.html">Blog</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+  </div>
+</nav><div class="page-hero"><div class="container">
+  <div class="page-share">PAYLAŞ: <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a><a href="#" class="tw"><i class="fab fa-twitter"></i></a><a href="#" class="wa"><i class="fab fa-whatsapp"></i></a></div>
+  <h1>Blog</h1>
+  <nav class="breadcrumb"><a href="index.html">Ana Sayfa</a><i class="fas fa-chevron-right"></i><span>Blog</span></nav>
+</div></div>
+<section class="section-pad"><div class="container">
+<div style="display:grid;grid-template-columns:1fr 270px;gap:44px;align-items:start">
+  <div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div style="border:1px solid #edf1f3;border-top:3px solid #0960bd;overflow:hidden;transition:box-shadow .2s,transform .2s" onmouseover="this.style.boxShadow='0 6px 20px rgba(9,96,189,.1)';this.style.transform='translateY(-3px)';this.style.borderTopColor='#e0a833'" onmouseout="this.style.boxShadow='';this.style.transform='';this.style.borderTopColor='#0960bd'">
+        <div style="height:180px;background:linear-gradient(135deg,#e8f0fb,rgba(9,96,189,.1));display:flex;align-items:center;justify-content:center;font-size:3rem;color:#0960bd;opacity:.4"><i class="fas fa-heart"></i></div>
+        <div style="padding:20px">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e0a833;margin-bottom:8px;font-family:Montserrat,sans-serif">Vajinismus</div>
+          <h3 style="font-family:Montserrat,sans-serif;font-size:1rem;font-weight:800;color:#022040;line-height:1.35;margin-bottom:8px">Vajinismus Nedir? Belirtileri ve Nedenleri</h3>
+          <p style="font-size:.86rem;color:#666;line-height:1.65">Vajinismus hakkında temel bilgiler; belirtiler, nedenler ve tedavi seçenekleri.</p>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:14px;padding-top:12px;border-top:1px solid #eee;font-size:.75rem;color:#999"><span><i class="far fa-calendar" style="color:#e0a833"></i> 15 Ocak 2025</span><span><i class="far fa-clock" style="color:#e0a833"></i> 5 dk</span></div>
+        </div>
+      </div>
+      <div style="border:1px solid #edf1f3;border-top:3px solid #0960bd;overflow:hidden;transition:box-shadow .2s,transform .2s" onmouseover="this.style.boxShadow='0 6px 20px rgba(9,96,189,.1)';this.style.transform='translateY(-3px)';this.style.borderTopColor='#e0a833'" onmouseout="this.style.boxShadow='';this.style.transform='';this.style.borderTopColor='#0960bd'">
+        <div style="height:180px;background:linear-gradient(135deg,#e8f0fb,rgba(9,96,189,.1));display:flex;align-items:center;justify-content:center;font-size:3rem;color:#0960bd;opacity:.4"><i class="fas fa-brain"></i></div>
+        <div style="padding:20px">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e0a833;margin-bottom:8px;font-family:Montserrat,sans-serif">Hipnoz</div>
+          <h3 style="font-family:Montserrat,sans-serif;font-size:1rem;font-weight:800;color:#022040;line-height:1.35;margin-bottom:8px">Hipnoz ile Stres Yönetimi</h3>
+          <p style="font-size:.86rem;color:#666;line-height:1.65">Hipnoterapi seanslarının stres ve kaygı üzerindeki etkileri.</p>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:14px;padding-top:12px;border-top:1px solid #eee;font-size:.75rem;color:#999"><span><i class="far fa-calendar" style="color:#e0a833"></i> 8 Ocak 2025</span><span><i class="far fa-clock" style="color:#e0a833"></i> 7 dk</span></div>
+        </div>
+      </div>
+      <div style="border:1px solid #edf1f3;border-top:3px solid #0960bd;overflow:hidden;transition:box-shadow .2s,transform .2s" onmouseover="this.style.boxShadow='0 6px 20px rgba(9,96,189,.1)';this.style.transform='translateY(-3px)';this.style.borderTopColor='#e0a833'" onmouseout="this.style.boxShadow='';this.style.transform='';this.style.borderTopColor='#0960bd'">
+        <div style="height:180px;background:linear-gradient(135deg,#e8f0fb,rgba(9,96,189,.1));display:flex;align-items:center;justify-content:center;font-size:3rem;color:#0960bd;opacity:.4"><i class="fas fa-wave-square"></i></div>
+        <div style="padding:20px">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e0a833;margin-bottom:8px;font-family:Montserrat,sans-serif">Biorezonans</div>
+          <h3 style="font-family:Montserrat,sans-serif;font-size:1rem;font-weight:800;color:#022040;line-height:1.35;margin-bottom:8px">Biorezonans Nedir, Ne İşe Yarar?</h3>
+          <p style="font-size:.86rem;color:#666;line-height:1.65">Biorezonans terapisinin çalışma prensipleri ve uygulama alanları.</p>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:14px;padding-top:12px;border-top:1px solid #eee;font-size:.75rem;color:#999"><span><i class="far fa-calendar" style="color:#e0a833"></i> 2 Ocak 2025</span><span><i class="far fa-clock" style="color:#e0a833"></i> 6 dk</span></div>
+        </div>
+      </div>
+      <div style="border:1px solid #edf1f3;border-top:3px solid #0960bd;overflow:hidden;transition:box-shadow .2s,transform .2s" onmouseover="this.style.boxShadow='0 6px 20px rgba(9,96,189,.1)';this.style.transform='translateY(-3px)';this.style.borderTopColor='#e0a833'" onmouseout="this.style.boxShadow='';this.style.transform='';this.style.borderTopColor='#0960bd'">
+        <div style="height:180px;background:linear-gradient(135deg,#e8f0fb,rgba(9,96,189,.1));display:flex;align-items:center;justify-content:center;font-size:3rem;color:#0960bd;opacity:.4"><i class="fas fa-spa"></i></div>
+        <div style="padding:20px">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e0a833;margin-bottom:8px;font-family:Montserrat,sans-serif">Akupunktur</div>
+          <h3 style="font-family:Montserrat,sans-serif;font-size:1rem;font-weight:800;color:#022040;line-height:1.35;margin-bottom:8px">Akupunktur Seansından Ne Beklenir?</h3>
+          <p style="font-size:.86rem;color:#666;line-height:1.65">İlk akupunktur seansınıza gitmeden önce bilmeniz gerekenler.</p>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:14px;padding-top:12px;border-top:1px solid #eee;font-size:.75rem;color:#999"><span><i class="far fa-calendar" style="color:#e0a833"></i> 20 Ara 2024</span><span><i class="far fa-clock" style="color:#e0a833"></i> 4 dk</span></div>
+        </div>
+      </div>
+      <div style="border:1px solid #edf1f3;border-top:3px solid #0960bd;overflow:hidden;transition:box-shadow .2s,transform .2s" onmouseover="this.style.boxShadow='0 6px 20px rgba(9,96,189,.1)';this.style.transform='translateY(-3px)';this.style.borderTopColor='#e0a833'" onmouseout="this.style.boxShadow='';this.style.transform='';this.style.borderTopColor='#0960bd'">
+        <div style="height:180px;background:linear-gradient(135deg,#e8f0fb,rgba(9,96,189,.1));display:flex;align-items:center;justify-content:center;font-size:3rem;color:#0960bd;opacity:.4"><i class="fas fa-hand-holding-medical"></i></div>
+        <div style="padding:20px">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e0a833;margin-bottom:8px;font-family:Montserrat,sans-serif">Kupa</div>
+          <h3 style="font-family:Montserrat,sans-serif;font-size:1rem;font-weight:800;color:#022040;line-height:1.35;margin-bottom:8px">Kupa Uygulaması (Hacamat) Hakkında</h3>
+          <p style="font-size:.86rem;color:#666;line-height:1.65">Geleneksel kupa uygulamasının faydaları ve uygulama süreci.</p>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:14px;padding-top:12px;border-top:1px solid #eee;font-size:.75rem;color:#999"><span><i class="far fa-calendar" style="color:#e0a833"></i> 10 Ara 2024</span><span><i class="far fa-clock" style="color:#e0a833"></i> 5 dk</span></div>
+        </div>
+      </div>
+      <div style="border:1px solid #edf1f3;border-top:3px solid #0960bd;overflow:hidden;transition:box-shadow .2s,transform .2s" onmouseover="this.style.boxShadow='0 6px 20px rgba(9,96,189,.1)';this.style.transform='translateY(-3px)';this.style.borderTopColor='#e0a833'" onmouseout="this.style.boxShadow='';this.style.transform='';this.style.borderTopColor='#0960bd'">
+        <div style="height:180px;background:linear-gradient(135deg,#e8f0fb,rgba(9,96,189,.1));display:flex;align-items:center;justify-content:center;font-size:3rem;color:#0960bd;opacity:.4"><i class="fas fa-leaf"></i></div>
+        <div style="padding:20px">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e0a833;margin-bottom:8px;font-family:Montserrat,sans-serif">Bütüncül Tıp</div>
+          <h3 style="font-family:Montserrat,sans-serif;font-size:1rem;font-weight:800;color:#022040;line-height:1.35;margin-bottom:8px">Bütüncül Tıp Nedir?</h3>
+          <p style="font-size:.86rem;color:#666;line-height:1.65">Modern tıp ile geleneksel yöntemlerin birlikte kullanılması.</p>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:14px;padding-top:12px;border-top:1px solid #eee;font-size:.75rem;color:#999"><span><i class="far fa-calendar" style="color:#e0a833"></i> 1 Ara 2024</span><span><i class="far fa-clock" style="color:#e0a833"></i> 5 dk</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div style="background:#f5f7fa;border:1px solid #e0e4e8;padding:20px;margin-bottom:16px">
+      <h4 style="font-family:Montserrat,sans-serif;font-size:11px;font-weight:800;color:#022040;margin-bottom:13px;padding-bottom:9px;border-bottom:2px solid #0960bd;letter-spacing:.12em;text-transform:uppercase">Kategoriler</h4>
+      <div style="display:flex;flex-direction:column;gap:4px"><a href="#" style="display:flex;align-items:center;justify-content:space-between;font-size:.87rem;color:#444;padding:8px 10px;transition:all .2s" onmouseover="this.style.background='#e8f0fb';this.style.color='#0960bd'" onmouseout="this.style.background='';this.style.color='#444'">Vajinismus <span style="font-size:.72rem;background:#0960bd;color:#fff;padding:2px 8px;border-radius:20px">4</span></a><a href="#" style="display:flex;align-items:center;justify-content:space-between;font-size:.87rem;color:#444;padding:8px 10px;transition:all .2s" onmouseover="this.style.background='#e8f0fb';this.style.color='#0960bd'" onmouseout="this.style.background='';this.style.color='#444'">Akupunktur <span style="font-size:.72rem;background:#0960bd;color:#fff;padding:2px 8px;border-radius:20px">5</span></a><a href="#" style="display:flex;align-items:center;justify-content:space-between;font-size:.87rem;color:#444;padding:8px 10px;transition:all .2s" onmouseover="this.style.background='#e8f0fb';this.style.color='#0960bd'" onmouseout="this.style.background='';this.style.color='#444'">Hipnoz <span style="font-size:.72rem;background:#0960bd;color:#fff;padding:2px 8px;border-radius:20px">4</span></a><a href="#" style="display:flex;align-items:center;justify-content:space-between;font-size:.87rem;color:#444;padding:8px 10px;transition:all .2s" onmouseover="this.style.background='#e8f0fb';this.style.color='#0960bd'" onmouseout="this.style.background='';this.style.color='#444'">Biorezonans <span style="font-size:.72rem;background:#0960bd;color:#fff;padding:2px 8px;border-radius:20px">4</span></a><a href="#" style="display:flex;align-items:center;justify-content:space-between;font-size:.87rem;color:#444;padding:8px 10px;transition:all .2s" onmouseover="this.style.background='#e8f0fb';this.style.color='#0960bd'" onmouseout="this.style.background='';this.style.color='#444'">Kupa <span style="font-size:.72rem;background:#0960bd;color:#fff;padding:2px 8px;border-radius:20px">3</span></a><a href="#" style="display:flex;align-items:center;justify-content:space-between;font-size:.87rem;color:#444;padding:8px 10px;transition:all .2s" onmouseover="this.style.background='#e8f0fb';this.style.color='#0960bd'" onmouseout="this.style.background='';this.style.color='#444'">Bütüncül Tıp <span style="font-size:.72rem;background:#0960bd;color:#fff;padding:2px 8px;border-radius:20px">5</span></a>
+      </div>
+    </div>
+    <div style="background:#f5f7fa;border:1px solid #e0e4e8;padding:20px">
+      <h4 style="font-family:Montserrat,sans-serif;font-size:11px;font-weight:800;color:#022040;margin-bottom:13px;padding-bottom:9px;border-bottom:2px solid #0960bd;letter-spacing:.12em;text-transform:uppercase">Randevu Al</h4>
+      <p style="font-size:.87rem;color:#666;margin-bottom:14px;line-height:1.6">Sağlığınız için doğru adımı atın.</p>
+      <a href="iletisim.html" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#0960bd;color:#fff;padding:12px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:background .2s" onmouseover="this.style.background='#e0a833'" onmouseout="this.style.background='#0960bd'"><i class="fas fa-calendar-check"></i> Randevu Al</a>
+    </div>
+  </div>
+</div>
+</div></section>
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <a class="brand" href="index.html">OP.DR. MAZHAR ESERDAĞ</a>
+      <ol class="social-media">
+        <li class="facebook"><a href="https://www.facebook.com/mazhar.eserdag" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li class="instagram"><a href="https://www.instagram.com/drmazhareserdag/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        <li class="whatsapp"><a href="https://wa.me/905551939445" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+        <li class="google"><a href="https://maps.google.com/?q=38.435120,27.143602" target="_blank"><i class="fa fa-map-marker"></i></a></li>
+      </ol>
+      <div class="footer-phones">
+        <a href="tel:+905054020504">+90 (505) 402 05 04</a>
+        <a href="tel:+905551939445">+90 (555) 193 94 45</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-links-area">
+    <div class="container">
+      <div class="footer-col"><h4>OP.DR. MAZHAR ESERDAĞ</h4><ul>
+        <li><a href="hakkimda.html">Hakkımda</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+        <li><a href="iletisim.html">Randevu Al</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>TEDAVİLER</h4><ul>
+        <li><a href="vajinismus.html">Vajinismus</a></li>
+        <li><a href="biorezonans.html">Biorezonans</a></li>
+        <li><a href="akupunktur.html">Akupunktur</a></li>
+        <li><a href="hipnoz.html">Hipnoz</a></li>
+        <li><a href="kupa.html">Kupa Uygulamaları</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>İLETİŞİM</h4><ul>
+        <li><a href="https://maps.google.com/?q=38.435120,27.143602" target="_blank">Talatpaşa Bulvarı No 42/4 (Uyar Apt. Kat:2 Daire:4) Alsancak/İzmir</a></li>
+        <li><a href="tel:+905054020504">+90 (505) 402 05 04</a></li>
+        <li><a href="mailto:mmazhareserdag@yahoo.com">mmazhareserdag@yahoo.com</a></li>
+        <li><a href="https://wa.me/905551939445" target="_blank">WhatsApp ile Mesaj Gönder</a></li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="copyright container">
+    <p>Copyright &copy; 2025 Op.Dr. Mazhar Eserdağ. Tüm Hakları Saklıdır.</p>
+  </div>
+</footer>
+<ul class="mobile-contact">
+  <li class="wa"><a href="https://wa.me/905551939445" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
+  <li class="ra"><a href="tel:+905054020504"><i class="fa fa-phone"></i>Ara</a></li>
+  <li class="ig"><a href="https://www.instagram.com/drmazhareserdag/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a></li>
+  <li class="fb"><a href="iletisim.html"><i class="fa fa-calendar-check"></i>Randevu</a></li>
+</ul>
+<button class="scroll-top" id="scrollTop"><i class="fa fa-chevron-up"></i></button>
 <script src="js/main.js"></script>
 </body></html>
